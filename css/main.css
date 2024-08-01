@@ -291,9 +291,18 @@ body {
 .footer-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* Space between logo and text */
+    gap: 5px;
+    height: 80px;  
+    border-bottom: 1px solid #ccc;  
 }
+.footer-header1 {
+    display: flex;
+    align-items: center;    
+    height: 80px;  
+    border-bottom: 1px solid #ccc;  
+}
+
+
 
 .footer-logo {
     max-width: 80px;
@@ -313,6 +322,12 @@ body {
         max-width: 50px;
         /* Resize further for mobile screens */
     }
+}
+
+.footer-intro {
+  text-align: justify;
+  
+  padding-top: 10px;
 }
 
 /* Social Media */
