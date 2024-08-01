@@ -282,6 +282,9 @@ body {
   padding: 30px;
 }
 
+.footer-contain {
+  margin-bottom: 20px;
+}
 
 /* footer header  */
 
@@ -574,5 +577,33 @@ body {
     .btn-primary {
         width: 100%;
         /* Full width button on smaller screens */
+    }
+}
+
+/* Copyright Section */
+.footer-copyright-section {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 20px; /* Add some padding */
+    background-color: #ebe4e4; /* Optional: Background color for the row */
+    color: #333; /* Optional: Text color */
+    font-size: 18px; /* Adjust font size as needed */
+    border-top: 1px solid #ccc;
+
+
+}
+
+.footer-copy-contain {
+    text-align: center; /* Center text within the column */
+}
+
+@media (max-width: 768px) {
+    .footer-copyright-section {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-copyright-section {
+        font-size: 12px; /* Adjust font size for smaller screens */
     }
 }
