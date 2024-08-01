@@ -52,7 +52,7 @@ body {
 
 .navbar-nav .nav-item {
     margin-right: 40px;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     color: white !important;
     opacity: 0; /* Start with hidden items */
