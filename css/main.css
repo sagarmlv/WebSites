@@ -18,8 +18,8 @@ body {
 /* Header Navbar */
 .header {
     position: relative;
-    background-color: white;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    background-color: #ebe4e4;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -79,8 +79,9 @@ body {
 /* banner */
 
 #body-section {
-  width: 100%;
-  position: relative;
+
+    position: relative;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -102,67 +103,383 @@ body {
 }
 
 .banner-contain {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
 }
 
 .banner-contain h1 {
-  font-size: 92px;
-  letter-spacing: 2px;
-  position: relative;
-  text-align: left;
-  text-shadow: 2px 2px 5px red;
-  cursor: pointer;
+    font-size: 92px;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: left;
+    text-shadow: 2px 2px 5px red;
+    cursor: pointer;
 
 }
 
 .banner-contain h1::after {
-  content: ""; 
-  position: absolute; 
-  left: 0;
-  right: 0;  
-  bottom: 0;
-  background-color: red;
-  width: 1%;
-  height: 5px;
-  z-index: -1; 
-  transition: width 2s;
-  animation-name: slider-line;
-  animation-duration: 2s;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    width: 1%;
+    height: 5px;
+    z-index: -1;
+    transition: width 2s;
+    animation-name: slider-line;
+    animation-duration: 2s;
 }
 
 .banner-contain h1:hover::after {
-  width: 100%; 
-  background-color: blue; 
+    width: 100%;
+    background-color: blue;
 }
 
 .banner-contain p {
-  font-size: 26px;
-  letter-spacing: 2px;
-  position: relative;
+    font-size: 26px;
+    letter-spacing: 2px;
+    position: relative;
 }
 
 .banner-contain button {
-  width: 200px;
-  height: 50px;
-  position: relative;
-  padding: 10px;
-  letter-spacing: 2px;
-  background: blue;
-  color: white;
-  font-size: 20px;
-  font-weight: normal;
-  outline: none;
-  border-radius: 10px;
-  border: none;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    padding: 10px;
+    letter-spacing: 2px;
+    background: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+
 
 }
 
 .banner-contain button:hover {
-  color: black;
-  background: white;
+    color: black;
+    background: white;
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer  */
+
+#footer {
+    position: relative;
+    background-color: #ebe4e4;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+
+}
+
+/* footer header  */
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between logo and text */
+}
+
+.footer-logo {
+    max-width: 80px;
+    /* Adjust the size as needed */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .footer-logo {
+        max-width: 75px;
+        /* Resize for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        max-width: 50px;
+        /* Resize further for mobile screens */
+    }
+}
+
+/* Social Media */
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    /* Space between icons */
+}
+
+.social-media i {
+    font-size: 24px;
+    /* Icon size */
+    color: #333;
+    /* Default icon color */
+    transition: color 0.3s ease;
+}
+
+.social-media i:hover {
+    color: #007bff;
+    /* Change color on hover */
+    cursor: pointer;
+}
+
+/* Optional: Style adjustments for responsiveness */
+@media (max-width: 768px) {
+    .social-media i {
+        font-size: 20px;
+        /* Smaller icons on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .social-media i {
+        font-size: 18px;
+        /* Even smaller icons on mobile */
+    }
+}
+
+/* Footer menu ( ul ) */
+
+.footer-menu {
+    text-align: left;
+    /* Center the menu */
+    padding: 20px 0;
+    /* Padding for spacing */
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.footer-menu li {
+    display: block;
+    ;
+    /* Display items horizontally */
+    margin: 0 15px;
+    /* Space between menu items */
+}
+
+.footer-menu a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #333;
+    /* Default link color */
+    font-size: 16px;
+    /* Font size */
+    transition: color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.footer-menu a:hover {
+    color: #007bff;
+    /* Change color on hover */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-menu li {
+        margin: 0 10px;
+        /* Reduce spacing on smaller screens */
+    }
+
+    .footer-menu a {
+        font-size: 14px;
+        /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-menu li {
+        display: block;
+        /* Stack menu items vertically */
+        margin: 10px 0;
+        /* Space between items */
+    }
+
+    .footer-menu a {
+        font-size: 16px;
+        /* Adjust font size */
+    }
+}
+
+/* Office Information */
+
+.footer-location {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between address and phone number */
+    justify-content: center;
+    /* Center the content */
+    padding: 20px 0;
+    /* Padding for spacing */
+    color: #333;
+    /* Default text color */
+    font-size: 16px;
+    /* Font size for text */
+}
+
+.footer-location div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between icons and text */
+    cursor: pointer;
+}
+
+.footer-location i {
+    font-size: 20px;
+    /* Size of the icons */
+    color: #333;
+    /* Default color for icons */
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+.footer-location span {
+    font-size: 16px;
+    /* Font size for the text */
+}
+
+.footer-location i:hover {
+    color: #007bff;
+    /* Change icon color on hover */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-location {
+        flex-direction: column;
+        /* Stack address and phone number vertically */
+        align-items: flex-start;
+        /* Align text and icons to the left */
+        gap: 20px;
+        /* Space between stacked items */
+    }
+
+    .footer-location i {
+        font-size: 20px;
+        /* Smaller icons */
+    }
+
+    .footer-location span {
+        font-size: 14px;
+        /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-location i {
+        font-size: 18px;
+        /* Even smaller icons on mobile */
+    }
+
+    .footer-location span {
+        font-size: 14px;
+        /* Smaller text size */
+    }
+}
+
+/* Newsletter */
+
+/* General Styles */
+.footer-header h3 {
+    color: #333;
+    /* Header text color */
+    margin-bottom: 20px;
+    /* Space below header */
+    font-size: 20px;
+    /* Header font size */
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+    /* Space between label and input */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    /* Space below label */
+    font-size: 14px;
+    /* Label font size */
+    color: #555;
+    /* Label text color */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    /* Input font size */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 4px;
+    /* Rounded corners */
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    /* Border color on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    /* Button font size */
+    border: none;
+    border-radius: 4px;
+    /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    /* Darker color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-header h3 {
+        font-size: 18px;
+        /* Smaller header font size */
+    }
+
+    .btn-primary {
+        width: 100%;
+        /* Full width button on smaller screens */
+    }
 }
