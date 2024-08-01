@@ -235,13 +235,25 @@ body {
 
 
 
-.wave-container {  
+.wave-container {
   height: 30vh;
   background-color: #05689b;
   position: relative;
+  overflow: hidden; /* Hide any overflow from animation */
 }
 
-.wave-container::before {   
+/* Define the keyframe animation for the wave */
+@keyframes waveAnimation {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px; /* Adjust based on the SVG width */
+  }
+}
+
+/* Apply the SVG background */
+.wave-container::before {
   content: "";
   width: 100%;
   height: 75px;
@@ -249,24 +261,25 @@ body {
   bottom: -0.3%;
   left: 0;
   background-size: auto;
-  background-repeat: repeat no-repeat;
-  background-position: 32vw bottom;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  92' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 67L50 63C100 59 200 51 300 34C400 18 500 -7 600 1C700 9 800 51 900 67C1000 84 1100 76 1150 72L1200 67V92H1150C1100 92 1000 92 900 92C800 92 700 92 600 92C500 92 400 92 300 92C200 92 100 92 50 92H0V67Z' fill='%23ebe4e4'/></svg>");
+  background-repeat: repeat-x; /* Repeat horizontally */
+  background-position: 0 bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 92' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 67L50 63C100 59 200 51 300 34C400 18 500 -7 600 1C700 9 800 51 900 67C1000 84 1100 76 1150 72L1200 67V92H1150C1100 92 1000 92 900 92C800 92 700 92 600 92C500 92 400 92 300 92C200 92 100 92 50 92H0V67Z' fill='%23ebe4e4'/></svg>");
+  animation: waveAnimation 5s linear infinite; /* Apply animation */
 }
 
-@media(max-width:850px) {
-  .wave-container::before {    
-    height: 37.5px
-  }  
+/* Responsive adjustments */
+@media(max-width: 850px) {
+  .wave-container::before {
+    height: 37.5px; /* Adjust height on smaller screens */
+  }
 }
-/* Footer  */
 
+/* Footer styling */
 #footer {
-    position: relative;
-    background-color: #ebe4e4;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-
+  position: relative;
+  background-color: #ebe4e4;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
 
