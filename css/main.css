@@ -189,6 +189,15 @@ body {
     z-index: 1;
     /* Ensure content appears above the image */
 }
+.banner-contain p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    position: relative;
+    color: white;
+    /* Ensure readability on banner */
+    margin-top: 20px;
+    /* Add spacing below h1 */
+}
 
 .banner-contain h1 {
     font-size: 62px;
@@ -247,15 +256,7 @@ body {
     /* Change underline color on hover */
 }
 
-.banner-contain p {
-    font-size: 18px;
-    letter-spacing: 2px;
-    position: relative;
-    color: white;
-    /* Ensure readability on banner */
-    margin-top: 20px;
-    /* Add spacing below h1 */
-}
+
 
 .banner-contain button {
     width: 200px;
@@ -285,7 +286,7 @@ body {
     background-color: var(--bg-color); /* Set the hover background color */
     z-index: -1; /* Place the background behind the text */
     transition: width 1s ease-in-out; /* Smooth transition for expanding background */
-    
+
 }
 
 .banner-contain button:hover::before {
