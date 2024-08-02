@@ -18,7 +18,7 @@ body {
 /* Header Navbar */
 .header {
     position: relative;
-    background-color: #ebe4e4;
+    background-color: #0d146f;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
 
 }
@@ -78,7 +78,9 @@ body {
 
 
 
-.navbar-nav .nav-item a {}
+.navbar-nav .nav-item a {
+  color: white;
+}
 
 .navbar-nav .nav-item a:hover {
     color: #007bff;
@@ -136,75 +138,94 @@ body {
 
 #body-section {
     position: relative;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
-
 }
 
 .banner-img {
     width: 100%;
-    position: relative;
     height: 600px;
+    position: relative;
     overflow: hidden;
-
 }
 
 .banner-img img {
     width: 100%;
     height: 100%;
-    position: relative;
     object-fit: cover;
     object-position: center;
-    background: rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: -1; /* Ensure the image stays behind the content */
 }
 
 .banner-contain {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    position: relative;
+    align-items: flex-start; /* Align content to the left */
+    position: absolute;
+    top: 50%; /* Position content vertically centered */
+    left: 50px; /* Adjust horizontal position */
+    transform: translateY(-50%); /* Center vertically */
+    color: white; /* Text color to stand out on the banner */
+    z-index: 1; /* Ensure content appears above the image */
 }
 
 .banner-contain h1 {
     font-size: 92px;
     letter-spacing: 2px;
-    position: relative;
     text-align: left;
     text-shadow: 2px 2px 5px red;
     cursor: pointer;
-
+    margin: 0; /* Remove default margin */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner-img {
+        height: 400px; /* Adjust banner height for smaller screens */
+    }
+
+    .banner-contain {
+        left: 20px; /* Reduce padding on smaller screens */
+        text-align: center;
+        align-items: center; /* Center align content */
+        transform: translateY(-50%);
+    }
+
+    .banner-contain h1 {
+        font-size: 48px; /* Adjust font size for smaller screens */
+    }
+}
+
 
 .banner-contain h1::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 35%;
     background-color: red;
-    width: 1%;
-    height: 5px;
-    z-index: -1;
-    transition: width 2s;
-    animation-name: slider-line;
-    animation-duration: 2s;
+    width: 1%; /* Initial width of the underline */
+    height: 5px; /* Thickness of the underline */
+    z-index: -1; /* Place the line behind the text */
+    transition: width 2s, background-color 0.5s; /* Smooth transition for width and color */
 }
 
 .banner-contain h1:hover::after {
-    width: 100%;
-    background-color: blue;
+    width: 100%; /* Expand underline to full width on hover */
+    background-color: blue; /* Change underline color on hover */
 }
 
 .banner-contain p {
     font-size: 26px;
     letter-spacing: 2px;
     position: relative;
+    color: white; /* Ensure readability on banner */
+    margin-top: 20px; /* Add spacing below h1 */
 }
 
 .banner-contain button {
     width: 200px;
     height: 50px;
-    position: relative;
     padding: 10px;
     letter-spacing: 2px;
     background: blue;
@@ -214,14 +235,31 @@ body {
     outline: none;
     border-radius: 10px;
     border: none;
-
-
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Add spacing below paragraph */
 }
 
 .banner-contain button:hover {
     color: black;
     background: white;
+}
 
+/* Additional Styles for Responsiveness */
+@media (max-width: 768px) {
+    .banner-contain h1 {
+        font-size: 48px; /* Adjust h1 font size */
+    }
+
+    .banner-contain p {
+        font-size: 20px; /* Adjust paragraph font size */
+    }
+
+    .banner-contain button {
+        width: 180px;
+        height: 45px; /* Adjust button size */
+        font-size: 18px; /* Adjust button text size */
+    }
 }
 
 
