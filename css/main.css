@@ -18,7 +18,7 @@ body {
 /* Header Navbar */
 .header {
     position: relative;
-    background-color: #ebe4e4;
+    background-color: #0d146f;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
 
 }
@@ -38,25 +38,73 @@ body {
 
 }
 
+/* Define the keyframe animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .navbar-nav .nav-item {
     margin-right: 40px;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     color: white !important;
-
+    opacity: 0; /* Start with hidden items */
+    animation: fadeInUp 1s ease-out forwards; /* Apply animation */
+    animation-delay: 0.3s; /* Delay the start of the animation */
 }
 
-.navbar-nav .nav-item a {}
+.navbar-nav .nav-item:nth-child(1) {
+    animation-delay: 0.5s; /* Stagger the animation for each item */
+}
+
+.navbar-nav .nav-item:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.navbar-nav .nav-item:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.navbar-nav .nav-item:nth-child(4) {
+    animation-delay: 1.1s;
+}
+
+
+
+.navbar-nav .nav-item a {
+  color: white;
+}
 
 .navbar-nav .nav-item a:hover {
-    color: red;
-    text-decoration: underline;
+    color: #007bff;
+    
 }
+
+
+
 
 .navbar-menu-block {
 
     align-items: center;
 
+}
+/* Define the keyframe animation for the logo */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .logo {
@@ -65,7 +113,10 @@ body {
     position: relative;
     width: 100px;
     height: 100px;
-    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start with hidden logo */
+    animation: fadeInScale 1s ease-out forwards; /* Apply animation */
+    animation-delay: 0s; /* Animation starts immediately */
+    
 }
 
 .logo img {
@@ -76,80 +127,105 @@ body {
     object-position: center;
 }
 
+.logo:hover {
+    position: relative;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 2s ease;
+    
+}
+
 /* banner */
 
 #body-section {
-
     position: relative;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
-
 }
 
 .banner-img {
     width: 100%;
-    position: relative;
     height: 600px;
+    position: relative;
     overflow: hidden;
-
 }
 
 .banner-img img {
     width: 100%;
     height: 100%;
-    position: relative;
     object-fit: cover;
     object-position: center;
-    background: rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: -1; /* Ensure the image stays behind the content */
 }
 
 .banner-contain {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    position: relative;
+    align-items: flex-start; /* Align content to the left */
+    position: absolute;
+    top: 50%; /* Position content vertically centered */
+    left: 50px; /* Adjust horizontal position */
+    transform: translateY(-50%); /* Center vertically */
+    color: white; /* Text color to stand out on the banner */
+    z-index: 1; /* Ensure content appears above the image */
 }
 
 .banner-contain h1 {
     font-size: 92px;
     letter-spacing: 2px;
-    position: relative;
     text-align: left;
     text-shadow: 2px 2px 5px red;
     cursor: pointer;
-
+    margin: 0; /* Remove default margin */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner-img {
+        height: 400px; /* Adjust banner height for smaller screens */
+    }
+
+    .banner-contain {
+        left: 20px; /* Reduce padding on smaller screens */
+        text-align: center;
+        align-items: center; /* Center align content */
+        transform: translateY(-50%);
+    }
+
+    .banner-contain h1 {
+        font-size: 48px; /* Adjust font size for smaller screens */
+    }
+}
+
 
 .banner-contain h1::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 35%;
     background-color: red;
-    width: 1%;
-    height: 5px;
-    z-index: -1;
-    transition: width 2s;
-    animation-name: slider-line;
-    animation-duration: 2s;
+    width: 1%; /* Initial width of the underline */
+    height: 5px; /* Thickness of the underline */
+    z-index: -1; /* Place the line behind the text */
+    transition: width 2s, background-color 0.5s; /* Smooth transition for width and color */
 }
 
 .banner-contain h1:hover::after {
-    width: 100%;
-    background-color: blue;
+    width: 100%; /* Expand underline to full width on hover */
+    background-color: blue; /* Change underline color on hover */
 }
 
 .banner-contain p {
     font-size: 26px;
     letter-spacing: 2px;
     position: relative;
+    color: white; /* Ensure readability on banner */
+    margin-top: 20px; /* Add spacing below h1 */
 }
 
 .banner-contain button {
     width: 200px;
     height: 50px;
-    position: relative;
     padding: 10px;
     letter-spacing: 2px;
     background: blue;
@@ -159,14 +235,31 @@ body {
     outline: none;
     border-radius: 10px;
     border: none;
-
-
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    margin-top: 20px; /* Add spacing below paragraph */
 }
 
 .banner-contain button:hover {
     color: black;
     background: white;
+}
 
+/* Additional Styles for Responsiveness */
+@media (max-width: 768px) {
+    .banner-contain h1 {
+        font-size: 48px; /* Adjust h1 font size */
+    }
+
+    .banner-contain p {
+        font-size: 20px; /* Adjust paragraph font size */
+    }
+
+    .banner-contain button {
+        width: 180px;
+        height: 45px; /* Adjust button size */
+        font-size: 18px; /* Adjust button text size */
+    }
 }
 
 
@@ -180,13 +273,25 @@ body {
 
 
 
-.wave-container {  
+.wave-container {
   height: 30vh;
   background-color: #05689b;
   position: relative;
+  overflow: hidden; /* Hide any overflow from animation */
 }
 
-.wave-container::before {   
+/* Define the keyframe animation for the wave */
+@keyframes waveAnimation {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px; /* Adjust based on the SVG width */
+  }
+}
+
+/* Apply the SVG background */
+.wave-container::before {
   content: "";
   width: 100%;
   height: 75px;
@@ -194,35 +299,48 @@ body {
   bottom: -0.3%;
   left: 0;
   background-size: auto;
-  background-repeat: repeat no-repeat;
-  background-position: 32vw bottom;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  92' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 67L50 63C100 59 200 51 300 34C400 18 500 -7 600 1C700 9 800 51 900 67C1000 84 1100 76 1150 72L1200 67V92H1150C1100 92 1000 92 900 92C800 92 700 92 600 92C500 92 400 92 300 92C200 92 100 92 50 92H0V67Z' fill='%23ebe4e4'/></svg>");
+  background-repeat: repeat-x; /* Repeat horizontally */
+  background-position: 0 bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 92' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 67L50 63C100 59 200 51 300 34C400 18 500 -7 600 1C700 9 800 51 900 67C1000 84 1100 76 1150 72L1200 67V92H1150C1100 92 1000 92 900 92C800 92 700 92 600 92C500 92 400 92 300 92C200 92 100 92 50 92H0V67Z' fill='%23ebe4e4'/></svg>");
+  animation: waveAnimation 5s linear infinite; /* Apply animation */
 }
 
-@media(max-width:850px) {
-  .wave-container::before {    
-    height: 37.5px
-  }  
+/* Responsive adjustments */
+@media(max-width: 850px) {
+  .wave-container::before {
+    height: 37.5px; /* Adjust height on smaller screens */
+  }
 }
-/* Footer  */
 
+/* Footer styling */
 #footer {
-    position: relative;
-    background-color: #ebe4e4;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-
+  position: relative;
+  background-color: #ebe4e4;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
+.footer-contain {
+  margin-bottom: 20px;
+}
 
 /* footer header  */
 
 .footer-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* Space between logo and text */
+    gap: 5px;
+    height: 80px;  
+    border-bottom: 1px solid #ccc;  
 }
+.footer-header1 {
+    display: flex;
+    align-items: center;    
+    height: 80px;  
+    border-bottom: 1px solid #ccc;  
+}
+
+
 
 .footer-logo {
     max-width: 80px;
@@ -242,6 +360,12 @@ body {
         max-width: 50px;
         /* Resize further for mobile screens */
     }
+}
+
+.footer-intro {
+  text-align: justify;
+  
+  padding-top: 10px;
 }
 
 /* Social Media */
@@ -506,5 +630,33 @@ body {
     .btn-primary {
         width: 100%;
         /* Full width button on smaller screens */
+    }
+}
+
+/* Copyright Section */
+.footer-copyright-section {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 20px; /* Add some padding */
+    background-color: #ebe4e4; /* Optional: Background color for the row */
+    color: #333; /* Optional: Text color */
+    font-size: 18px; /* Adjust font size as needed */
+    border-top: 1px solid #ccc;
+
+
+}
+
+.footer-copy-contain {
+    text-align: center; /* Center text within the column */
+}
+
+@media (max-width: 768px) {
+    .footer-copyright-section {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-copyright-section {
+        font-size: 12px; /* Adjust font size for smaller screens */
     }
 }
