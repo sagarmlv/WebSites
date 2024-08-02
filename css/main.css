@@ -10,6 +10,10 @@
 
 }
 
+:root {
+    --bg-color: #0d146f;
+}
+
 body {
     background: rgb(148, 153, 215);
     background: radial-gradient(circle, rgba(148, 153, 215, 1) 2%, rgba(235, 237, 240, 1) 100%);
@@ -44,6 +48,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -55,13 +60,17 @@ body {
     font-size: 22px;
     text-align: center;
     color: white !important;
-    opacity: 0; /* Start with hidden items */
-    animation: fadeInUp 1s ease-out forwards; /* Apply animation */
-    animation-delay: 0.3s; /* Delay the start of the animation */
+    opacity: 0;
+    /* Start with hidden items */
+    animation: fadeInUp 1s ease-out forwards;
+    /* Apply animation */
+    animation-delay: 0.3s;
+    /* Delay the start of the animation */
 }
 
 .navbar-nav .nav-item:nth-child(1) {
-    animation-delay: 0.5s; /* Stagger the animation for each item */
+    animation-delay: 0.5s;
+    /* Stagger the animation for each item */
 }
 
 .navbar-nav .nav-item:nth-child(2) {
@@ -79,12 +88,12 @@ body {
 
 
 .navbar-nav .nav-item a {
-  color: white;
+    color: white;
 }
 
 .navbar-nav .nav-item a:hover {
     color: #007bff;
-    
+
 }
 
 
@@ -95,12 +104,14 @@ body {
     align-items: center;
 
 }
+
 /* Define the keyframe animation for the logo */
 @keyframes fadeInScale {
     0% {
         opacity: 0;
         transform: scale(0.8);
     }
+
     100% {
         opacity: 1;
         transform: scale(1);
@@ -113,10 +124,13 @@ body {
     position: relative;
     width: 100px;
     height: 100px;
-    opacity: 0; /* Start with hidden logo */
-    animation: fadeInScale 1s ease-out forwards; /* Apply animation */
-    animation-delay: 0s; /* Animation starts immediately */
-    
+    opacity: 0;
+    /* Start with hidden logo */
+    animation: fadeInScale 1s ease-out forwards;
+    /* Apply animation */
+    animation-delay: 0s;
+    /* Animation starts immediately */
+
 }
 
 .logo img {
@@ -131,7 +145,7 @@ body {
     position: relative;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
     transition: box-shadow 2s ease;
-    
+
 }
 
 /* banner */
@@ -153,20 +167,27 @@ body {
     object-fit: cover;
     object-position: center;
     position: relative;
-    z-index: -1; /* Ensure the image stays behind the content */
+    z-index: -1;
+    /* Ensure the image stays behind the content */
 }
 
 .banner-contain {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align content to the left */
+    align-items: flex-start;
+    /* Align content to the left */
     position: absolute;
-    top: 50%; /* Position content vertically centered */
-    left: 50px; /* Adjust horizontal position */
-    transform: translateY(-50%); /* Center vertically */
-    color: white; /* Text color to stand out on the banner */
-    z-index: 1; /* Ensure content appears above the image */
+    top: 50%;
+    /* Position content vertically centered */
+    left: 50px;
+    /* Adjust horizontal position */
+    transform: translateY(-50%);
+    /* Center vertically */
+    color: white;
+    /* Text color to stand out on the banner */
+    z-index: 1;
+    /* Ensure content appears above the image */
 }
 
 .banner-contain h1 {
@@ -175,24 +196,29 @@ body {
     text-align: left;
     /*text-shadow: 4px 2px 2px 2px red;*/
     cursor: pointer;
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    /* Remove default margin */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .banner-img {
-        height: 400px; /* Adjust banner height for smaller screens */
+        height: 400px;
+        /* Adjust banner height for smaller screens */
     }
 
     .banner-contain {
-        left: 20px; /* Reduce padding on smaller screens */
+        left: 20px;
+        /* Reduce padding on smaller screens */
         text-align: center;
-        align-items: center; /* Center align content */
+        align-items: center;
+        /* Center align content */
         transform: translateY(-50%);
     }
 
     .banner-contain h1 {
-        font-size: 26px; /* Adjust font size for smaller screens */
+        font-size: 26px;
+        /* Adjust font size for smaller screens */
     }
 }
 
@@ -204,23 +230,31 @@ body {
     right: 0;
     top: 35%;
     background-color: red;
-    width: 1%; /* Initial width of the underline */
-    height: 5px; /* Thickness of the underline */
-    z-index: -1; /* Place the line behind the text */
-    transition: width 2s, background-color 0.5s; /* Smooth transition for width and color */
+    width: 1%;
+    /* Initial width of the underline */
+    height: 5px;
+    /* Thickness of the underline */
+    z-index: -1;
+    /* Place the line behind the text */
+    transition: width 2s, background-color 0.5s;
+    /* Smooth transition for width and color */
 }
 
 .banner-contain h1:hover::after {
-    width: 100%; /* Expand underline to full width on hover */
-    background-color: blue; /* Change underline color on hover */
+    width: 100%;
+    /* Expand underline to full width on hover */
+    background-color: blue;
+    /* Change underline color on hover */
 }
 
 .banner-contain p {
     font-size: 18px;
     letter-spacing: 2px;
     position: relative;
-    color: white; /* Ensure readability on banner */
-    margin-top: 20px; /* Add spacing below h1 */
+    color: white;
+    /* Ensure readability on banner */
+    margin-top: 20px;
+    /* Add spacing below h1 */
 }
 
 .banner-contain button {
@@ -228,37 +262,59 @@ body {
     height: 50px;
     padding: 10px;
     letter-spacing: 2px;
-    background: red;
     color: white;
     font-size: 20px;
     font-weight: normal;
     outline: none;
     border-radius: 10px;
     border: none;
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-    margin-top: 20px; /* Add spacing below paragraph */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: red; /* Initial background color */
+    z-index: 1;
 }
 
-.banner-contain button:hover {
-    color: black;
-    background: white;
+.banner-contain button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10%; /* Start with 10% width */
+    background-color: var(--bg-color); /* Set the hover background color */
+    z-index: -1; /* Place the background behind the text */
+    transition: width 1s ease-in-out; /* Smooth transition for expanding background */
+    
 }
+
+.banner-contain button:hover::before {
+    width: 100%; /* Expand to full width on hover */
+}
+
+
+
+
+
 
 /* Additional Styles for Responsiveness */
 @media (max-width: 768px) {
     .banner-contain h1 {
-        font-size: 48px; /* Adjust h1 font size */
+        font-size: 48px;
+        /* Adjust h1 font size */
     }
 
     .banner-contain p {
-        font-size: 20px; /* Adjust paragraph font size */
+        font-size: 20px;
+        /* Adjust paragraph font size */
     }
 
     .banner-contain button {
         width: 180px;
-        height: 45px; /* Adjust button size */
-        font-size: 18px; /* Adjust button text size */
+        height: 45px;
+        /* Adjust button size */
+        font-size: 18px;
+        /* Adjust button text size */
     }
 }
 
@@ -274,54 +330,60 @@ body {
 
 
 .wave-container {
-  height: 30vh;
-  background-color: #05689b;
-  position: relative;
-  overflow: hidden; /* Hide any overflow from animation */
+    height: 30vh;
+    background-color: #05689b;
+    position: relative;
+    overflow: hidden;
+    /* Hide any overflow from animation */
 }
 
 /* Define the keyframe animation for the wave */
 @keyframes waveAnimation {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 1000px; /* Adjust based on the SVG width */
-  }
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 1000px;
+        /* Adjust based on the SVG width */
+    }
 }
 
 /* Apply the SVG background */
 .wave-container::before {
-  content: "";
-  width: 100%;
-  height: 75px;
-  position: absolute;
-  bottom: -0.3%;
-  left: 0;
-  background-size: auto;
-  background-repeat: repeat-x; /* Repeat horizontally */
-  background-position: 0 bottom;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 92' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 67L50 63C100 59 200 51 300 34C400 18 500 -7 600 1C700 9 800 51 900 67C1000 84 1100 76 1150 72L1200 67V92H1150C1100 92 1000 92 900 92C800 92 700 92 600 92C500 92 400 92 300 92C200 92 100 92 50 92H0V67Z' fill='%23ebe4e4'/></svg>");
-  animation: waveAnimation 5s linear infinite; /* Apply animation */
+    content: "";
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat-x;
+    /* Repeat horizontally */
+    background-position: 0 bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 92' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 67L50 63C100 59 200 51 300 34C400 18 500 -7 600 1C700 9 800 51 900 67C1000 84 1100 76 1150 72L1200 67V92H1150C1100 92 1000 92 900 92C800 92 700 92 600 92C500 92 400 92 300 92C200 92 100 92 50 92H0V67Z' fill='%23ebe4e4'/></svg>");
+    animation: waveAnimation 5s linear infinite;
+    /* Apply animation */
 }
 
 /* Responsive adjustments */
 @media(max-width: 850px) {
-  .wave-container::before {
-    height: 37.5px; /* Adjust height on smaller screens */
-  }
+    .wave-container::before {
+        height: 37.5px;
+        /* Adjust height on smaller screens */
+    }
 }
 
 /* Footer styling */
 #footer {
-  position: relative;
-  background-color: #ebe4e4;
-  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+    position: relative;
+    background-color: #ebe4e4;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
 }
 
 .footer-contain {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 /* footer header  */
@@ -330,14 +392,15 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    height: 80px;  
-    border-bottom: 1px solid #ccc;  
+    height: 80px;
+    border-bottom: 1px solid #ccc;
 }
+
 .footer-header1 {
     display: flex;
-    align-items: center;    
-    height: 80px;  
-    border-bottom: 1px solid #ccc;  
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #ccc;
 }
 
 
@@ -363,9 +426,9 @@ body {
 }
 
 .footer-intro {
-  text-align: justify;
-  
-  padding-top: 10px;
+    text-align: justify;
+
+    padding-top: 10px;
 }
 
 /* Social Media */
@@ -600,7 +663,7 @@ body {
     /* Remove default outline */
 }
 
-.btn-primary {
+.btn-primary1 {
     background-color: #007bff;
     /* Button background color */
     color: #fff;
@@ -615,7 +678,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn-primary1:hover {
     background-color: #0056b3;
     /* Darker color on hover */
 }
@@ -636,27 +699,36 @@ body {
 /* Copyright Section */
 .footer-copyright-section {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    padding: 20px; /* Add some padding */
-    background-color: #ebe4e4; /* Optional: Background color for the row */
-    color: #333; /* Optional: Text color */
-    font-size: 18px; /* Adjust font size as needed */
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    padding: 20px;
+    /* Add some padding */
+    background-color: #ebe4e4;
+    /* Optional: Background color for the row */
+    color: #333;
+    /* Optional: Text color */
+    font-size: 18px;
+    /* Adjust font size as needed */
     border-top: 1px solid #ccc;
 
 
 }
 
 .footer-copy-contain {
-    text-align: center; /* Center text within the column */
+    text-align: center;
+    /* Center text within the column */
 }
 
 @media (max-width: 768px) {
     .footer-copyright-section {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;
+        /* Adjust padding for smaller screens */
     }
 
     .footer-copyright-section {
-        font-size: 12px; /* Adjust font size for smaller screens */
+        font-size: 12px;
+        /* Adjust font size for smaller screens */
     }
 }
