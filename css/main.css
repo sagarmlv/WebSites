@@ -327,10 +327,17 @@ body {
     }
 }
 
-
 /* Our Services */
 
+.service-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
 
+}
 
 
 
@@ -466,17 +473,24 @@ body {
 }
 
 .social-media i {
-    font-size: 28px;
+    font-size: 20px;
     /* Icon size */
     color: white;
     /* Default icon color */
     transition: color 0.3s ease;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
 }
 
 .social-media i:hover {
-    color: #007bff;
+    color: white;
     /* Change color on hover */
     cursor: pointer;
+    background-color: red;
+    transition: 2s ease-in-out;
 }
 
 /* Optional: Style adjustments for responsiveness */
