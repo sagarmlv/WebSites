@@ -170,10 +170,10 @@ body {
 }
 
 .banner-contain h1 {
-    font-size: 92px;
+    font-size: 62px;
     letter-spacing: 2px;
     text-align: left;
-    text-shadow: 2px 2px 5px red;
+    /*text-shadow: 4px 2px 2px 2px red;*/
     cursor: pointer;
     margin: 0; /* Remove default margin */
 }
@@ -192,7 +192,7 @@ body {
     }
 
     .banner-contain h1 {
-        font-size: 48px; /* Adjust font size for smaller screens */
+        font-size: 26px; /* Adjust font size for smaller screens */
     }
 }
 
@@ -216,7 +216,7 @@ body {
 }
 
 .banner-contain p {
-    font-size: 26px;
+    font-size: 18px;
     letter-spacing: 2px;
     position: relative;
     color: white; /* Ensure readability on banner */
@@ -228,7 +228,7 @@ body {
     height: 50px;
     padding: 10px;
     letter-spacing: 2px;
-    background: blue;
+    background: red;
     color: white;
     font-size: 20px;
     font-weight: normal;
