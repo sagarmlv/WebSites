@@ -328,6 +328,9 @@ body {
 }
 
 
+/* Our Services */
+
+
 
 
 
@@ -353,7 +356,7 @@ body {
 }
 
 .wave-container {
-    height: 30vh;
+    height: 50vh;
     background-color: rgba(155, 168, 168, 0.97);
     position: relative;
 }
@@ -377,6 +380,12 @@ body {
         height: 27px
     }
 }
+
+
+
+
+
+
 
 
 
@@ -507,7 +516,7 @@ body {
     display: block;
     ;
     /* Display items horizontally */
-    margin: 0 15px;
+    margin-bottom: 5px;
     /* Space between menu items */
 }
 
@@ -731,7 +740,7 @@ body {
     /* Optional: Background color for the row */
     color: white;
     /* Optional: Text color */
-    font-size: 18px;
+    font-size: 16px;
     /* Adjust font size as needed */
     border-top: 1px solid #ccc;
 
