@@ -3,10 +3,10 @@
     padding: 0;
     margin: 0;
     letter-spacing: 2px;
-    font-family: "Teko", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 
 }
 
@@ -57,7 +57,7 @@ body {
 
 .navbar-nav .nav-item {
     margin-right: 40px;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     color: white !important;
     opacity: 0;
@@ -189,8 +189,9 @@ body {
     z-index: 1;
     /* Ensure content appears above the image */
 }
+
 .banner-contain p {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 2px;
     position: relative;
     color: white;
@@ -200,7 +201,7 @@ body {
 }
 
 .banner-contain h1 {
-    font-size: 62px;
+    font-size: 48px;
     letter-spacing: 2px;
     text-align: left;
     /*text-shadow: 4px 2px 2px 2px red;*/
@@ -226,7 +227,7 @@ body {
     }
 
     .banner-contain h1 {
-        font-size: 26px;
+        font-size: 20px;
         /* Adjust font size for smaller screens */
     }
 }
@@ -237,7 +238,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    top: 35%;
+    top: 37%;
     background-color: red;
     width: 1%;
     /* Initial width of the underline */
@@ -264,7 +265,7 @@ body {
     padding: 10px;
     letter-spacing: 2px;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
     outline: none;
     border-radius: 10px;
@@ -272,7 +273,8 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    background-color: red; /* Initial background color */
+    background-color: red;
+    /* Initial background color */
     z-index: 1;
 }
 
@@ -282,15 +284,21 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 10%; /* Start with 10% width */
-    background-color: var(--bg-color); /* Set the hover background color */
-    z-index: -1; /* Place the background behind the text */
-    transition: width 1s ease-in-out; /* Smooth transition for expanding background */
+    width: 10%;
+    /* Start with 10% width */
+    background-color: var(--bg-color);
+    /* Set the hover background color */
+    z-index: -1;
+    /* Place the background behind the text */
+    transition: width 1s ease-in-out;
+    /* Smooth transition for expanding background */
 
 }
 
 .banner-contain button:hover::before {
-    width: 100%; /* Expand to full width on hover */
+    width: 100%;
+    /* Expand to full width on hover */
+    overflow: hidden;
 }
 
 
@@ -301,12 +309,12 @@ body {
 /* Additional Styles for Responsiveness */
 @media (max-width: 768px) {
     .banner-contain h1 {
-        font-size: 48px;
+        font-size: 26px;
         /* Adjust h1 font size */
     }
 
     .banner-contain p {
-        font-size: 20px;
+        font-size: 15px;
         /* Adjust paragraph font size */
     }
 
@@ -330,13 +338,7 @@ body {
 
 
 
-.wave-container {
-    height: 30vh;
-    background-color: #05689b;
-    position: relative;
-    overflow: hidden;
-    /* Hide any overflow from animation */
-}
+
 
 /* Define the keyframe animation for the wave */
 @keyframes waveAnimation {
@@ -350,7 +352,12 @@ body {
     }
 }
 
-/* Apply the SVG background */
+.wave-container {
+    height: 30vh;
+    background-color: rgba(155, 168, 168, 0.97);
+    position: relative;
+}
+
 .wave-container::before {
     content: "";
     width: 100%;
@@ -360,27 +367,26 @@ body {
     left: 0;
     background-size: auto;
     background-repeat: repeat-x;
-    /* Repeat horizontally */
     background-position: 0 bottom;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 92' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 67L50 63C100 59 200 51 300 34C400 18 500 -7 600 1C700 9 800 51 900 67C1000 84 1100 76 1150 72L1200 67V92H1150C1100 92 1000 92 900 92C800 92 700 92 600 92C500 92 400 92 300 92C200 92 100 92 50 92H0V67Z' fill='%23ebe4e4'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  103' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 75L50 71C100 66 200 57 300 38C400 20 500 -8 600 1C700 11 800 57 900 75C1000 94 1100 84 1150 80L1200 75V103H1150C1100 103 1000 103 900 103C800 103 700 103 600 103C500 103 400 103 300 103C200 103 100 103 50 103H0V75Z' fill='%230d146f'/></svg>");
     animation: waveAnimation 5s linear infinite;
-    /* Apply animation */
 }
 
-/* Responsive adjustments */
-@media(max-width: 850px) {
+@media(max-width:850px) {
     .wave-container::before {
-        height: 37.5px;
-        /* Adjust height on smaller screens */
+        height: 27px
     }
 }
+
+
 
 /* Footer styling */
 #footer {
     position: relative;
-    background-color: #ebe4e4;
+    background-color: var(--bg-color);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    color: white;
 }
 
 .footer-contain {
@@ -395,6 +401,11 @@ body {
     gap: 5px;
     height: 80px;
     border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.footer-header span {
+    font-size: 24px;
 }
 
 .footer-header1 {
@@ -402,6 +413,10 @@ body {
     align-items: center;
     height: 80px;
     border-bottom: 1px solid #ccc;
+
+}
+.footer-header1 h3 {
+  font-size: 24px;
 }
 
 
@@ -410,6 +425,7 @@ body {
     max-width: 80px;
     /* Adjust the size as needed */
     height: auto;
+    border-radius: 50%;
 }
 
 @media (max-width: 768px) {
@@ -441,9 +457,9 @@ body {
 }
 
 .social-media i {
-    font-size: 24px;
+    font-size: 28px;
     /* Icon size */
-    color: #333;
+    color: white;
     /* Default icon color */
     transition: color 0.3s ease;
 }
@@ -457,14 +473,14 @@ body {
 /* Optional: Style adjustments for responsiveness */
 @media (max-width: 768px) {
     .social-media i {
-        font-size: 20px;
+        font-size: 14px;
         /* Smaller icons on tablets */
     }
 }
 
 @media (max-width: 480px) {
     .social-media i {
-        font-size: 18px;
+        font-size: 14px;
         /* Even smaller icons on mobile */
     }
 }
@@ -498,7 +514,7 @@ body {
 .footer-menu a {
     text-decoration: none;
     /* Remove underline from links */
-    color: #333;
+    color: white;
     /* Default link color */
     font-size: 16px;
     /* Font size */
@@ -549,9 +565,9 @@ body {
     /* Center the content */
     padding: 20px 0;
     /* Padding for spacing */
-    color: #333;
+    color: white;
     /* Default text color */
-    font-size: 16px;
+    font-size: 14px;
     /* Font size for text */
 }
 
@@ -564,9 +580,9 @@ body {
 }
 
 .footer-location i {
-    font-size: 20px;
+    font-size: 22px;
     /* Size of the icons */
-    color: #333;
+    color: white;
     /* Default color for icons */
     transition: color 0.3s ease;
     /* Smooth color transition on hover */
@@ -620,7 +636,7 @@ body {
 
 /* General Styles */
 .footer-header h3 {
-    color: #333;
+    color: white;
     /* Header text color */
     margin-bottom: 20px;
     /* Space below header */
@@ -638,10 +654,11 @@ body {
     display: block;
     margin-bottom: 5px;
     /* Space below label */
-    font-size: 14px;
+    font-size: 20px;
     /* Label font size */
-    color: #555;
+    color: white;
     /* Label text color */
+    margin-top: 10px;
 }
 
 .form-control {
@@ -655,19 +672,22 @@ body {
     /* Rounded corners */
     box-sizing: border-box;
     outline: none;
+    margin-top: 10px;
+    background: transparent !important;
+    color: white !important;
 }
 
 .form-control:focus {
-    border-color: #007bff;
+    border-color: none;
     /* Border color on focus */
     outline: none;
     /* Remove default outline */
 }
 
 .btn-primary1 {
-    background-color: #007bff;
+    background-color: red !important;
     /* Button background color */
-    color: #fff;
+    color: white !important;
     /* Button text color */
     padding: 10px 20px;
     font-size: 16px;
@@ -680,8 +700,9 @@ body {
 }
 
 .btn-primary1:hover {
-    background-color: #0056b3;
+    background-color: var(--bg-color);
     /* Darker color on hover */
+    color: white;
 }
 
 /* Responsive Styles */
@@ -706,9 +727,9 @@ body {
     /* Center the content vertically */
     padding: 20px;
     /* Add some padding */
-    background-color: #ebe4e4;
+    background-color: var(--bg-color);
     /* Optional: Background color for the row */
-    color: #333;
+    color: white;
     /* Optional: Text color */
     font-size: 18px;
     /* Adjust font size as needed */
