@@ -43,7 +43,8 @@
     align-items: flex-start;
     /* Align content to the left */
     position: absolute;
-    top: 30%;
+    top: 50%;
+
     /* Position content vertically centered */
     left: 50px;
     /* Adjust horizontal position */
@@ -70,7 +71,7 @@
     position: absolute;
     left: 10px;
     right: 0;
-    top: 33%;
+    top: 12%;
     background-color: red;
     width: 1%;
     /* Initial width of the underline */
@@ -82,7 +83,7 @@
     /* Smooth transition for width and color */
 }
 .banner-contain-con h1:hover::after {
-    width: 35%;
+    width: 25%;
     /* Expand underline to full width on hover */
     background-color: blue;
     /* Change underline color on hover */
@@ -93,5 +94,64 @@
     position: relative;
     color: white;
     /* Ensure readability on banner */
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.comp-info {
+    position: relative;
+    text-align: justify;
+}
+
+.email-comp,
+.number-comp,
+.address-comp {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.email-comp i,
+.number-comp i,
+.address-comp i {
+    margin-right: 10px;
+    color: red; 
+    border-radius: 40%;    
+    padding: 10px;
+    background: white;
+    outline: none;
+}
+.email-comp i:hover,
+.number-comp i:hover,
+.address-comp i:hover {
+    margin-right: 10px;
+    color: white;     
+    background: red;
+    outline: none;
+    transition: 0.5s ease;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.email-comp a {
+    color: white;
+    text-decoration: none;
+}
+
+.email-comp a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .comp-info {
+        flex-direction: row;
+        gap: 40px;
+    }
 }
