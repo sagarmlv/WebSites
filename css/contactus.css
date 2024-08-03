@@ -1,50 +1,157 @@
-body .form-control {
-    background-color: transparent;
-    color: white;
 
+
+.wave-container-contact {
+    height: 0vh;
+    background: rgb(148, 153, 215);
+    background: radial-gradient(circle, rgba(148, 153, 215, 1) 2%, rgba(235, 237, 240, 1) 100%);
+    position: relative;
 }
 
-.Heading {
-    margin-top: 10px;
-    text-align: center;
-    padding: 10px;
-    font-style: italic;
-    font-size: xx-large;
-    color: white;
-
-}
-
-.txt {
+.wave-container-contact::before {
+    content: "";
     width: 100%;
-    height: 30px;
-    border: none;
-    border-bottom: 2px solid black;
-    margin-bottom: 15px;
-    background: transparent;
-
+    height: 75px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  103' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 75L50 71C100 66 200 57 300 38C400 20 500 -8 600 1C700 11 800 57 900 75C1000 94 1100 84 1150 80L1200 75V103H1150C1100 103 1000 103 900 103C800 103 700 103 600 103C500 103 400 103 300 103C200 103 100 103 50 103H0V75Z' fill='%230d146f'/></svg>");
+    animation: waveAnimation 5s linear infinite;
 }
 
-.lbl {
-    font-style: italic;
-    font-family: 'Cambria, Cochin', Georgia, Times, 'Times New Roman', serif;
+@media(max-width:850px) {
+    .wave-container-contact::before {
+        height: 27px
+    }
 }
 
-textarea {
+
+/* Main Contain of body  */
+
+#main-contain-contact {
     width: 100%;
-    height: 30px;
-    border: none;
-    border-bottom: 2px solid black;
-    margin-top: 10px;
-    background: transparent;
-
+    height: 100vh;
+    position: relative;
 }
 
-.submit-btn {
-    border-radius: 30px;
+.banner-contain-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* Align content to the left */
+    position: absolute;
+    top: 50%;
+
+    /* Position content vertically centered */
+    left: 50px;
+    /* Adjust horizontal position */
+    transform: translateY(-50%);
+    /* Center vertically */
+    color: white;
+    /* Text color to stand out on the banner */
+    z-index: 1;
+    /* Ensure content appears above the image */
+}
+
+.banner-contain-con h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-align: left;
+    /*text-shadow: 4px 2px 2px 2px red;*/
+    cursor: pointer;
+    margin: 0;
+    /* Remove default margin */
+}
+
+.banner-contain-con h1::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 0;
+    top: 12%;
+    background-color: red;
+    width: 1%;
+    /* Initial width of the underline */
+    height: 5px;
+    /* Thickness of the underline */
+    z-index: -1;
+    /* Place the line behind the text */
+    transition: width 2s, background-color 0.5s;
+    /* Smooth transition for width and color */
+}
+.banner-contain-con h1:hover::after {
+    width: 25%;
+    /* Expand underline to full width on hover */
+    background-color: blue;
+    /* Change underline color on hover */
+}
+.contact-heading p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    position: relative;
+    color: white;
+    /* Ensure readability on banner */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.comp-info {
+    position: relative;
+    text-align: justify;
+}
+
+.email-comp,
+.number-comp,
+.address-comp {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.email-comp i,
+.number-comp i,
+.address-comp i {
+    margin-right: 10px;
+    color: red; 
+    border-radius: 40%;    
     padding: 10px;
-    margin-top: 10px;
-    width: 100px;
-    background-color: black;
-    color: aliceblue;
-    box-shadow: inset;
+    background: white;
+    outline: none;
+}
+.email-comp i:hover,
+.number-comp i:hover,
+.address-comp i:hover {
+    margin-right: 10px;
+    color: white;     
+    background: red;
+    outline: none;
+    transition: 0.5s ease;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.email-comp a {
+    color: white;
+    text-decoration: none;
+}
+
+.email-comp a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .comp-info {
+        flex-direction: row;
+        gap: 40px;
+    }
 }
