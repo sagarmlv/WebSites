@@ -31,10 +31,17 @@
     position: relative;
 }
 
+#main-contain-about1 {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
 
 
 
-.banner-contain-about {
+
+.banner-contain-about,
+.banner-contain-about1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,13 +59,15 @@
     /* Ensure content appears above the image */
 }
 
-.banner-about-img {
+.banner-about-img,
+.banner-about-img1 {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.banner-about-img img {
+.banner-about-img img,
+.banner-about-img1 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
