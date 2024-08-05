@@ -103,17 +103,17 @@
 /* Second Banner */
 #main-contain-about1 {
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     position: relative;
-    background: white;
+    background: white !important;
+    
 }
 .banner-about2 {
     position: relative;
     width: 100%;
-    height: 400px;
+    height:100%;
     overflow: hidden;
     border-radius: 20px;
-
 }
 
 .banner-about2 img {
@@ -122,6 +122,14 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+
+.about-heading2 {
+    position: relative;
+    margin-top: 10px;
+
+
 }
 
 .about-lead {
