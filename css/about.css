@@ -51,6 +51,7 @@
     z-index: 1;
     /* Ensure content appears above the image */
 }
+
 .banner-about-img {
     width: 100%;
     height: 100%;
@@ -58,11 +59,11 @@
 }
 
 .banner-about-img img {
- width: 100%;
- height: 100%;
- object-fit: cover;
- object-position: center;
- position: relative;   
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
 }
 
 .banner-contain-about h1 {
@@ -91,6 +92,7 @@
     transition: width 2s, background-color 0.5s;
     /* Smooth transition for width and color */
 }
+
 .banner-contain-about h1:hover::after {
     width: 20%;
     /* Expand underline to full width on hover */
@@ -102,6 +104,6 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    margin-bottom: 100px;
-    
+    padding-bottom: 100px;
+    background: white;
 }
