@@ -38,15 +38,46 @@
     align-items: flex-start;
     /* Align content to the left */
     position: absolute;
-    top: 50%;
-
+    top: 20%;
     /* Position content vertically centered */
     left: 50px;
     /* Adjust horizontal position */
-    transform: translateY(-50%);
-    /* Center vertically */
+    
     color: white;
     /* Text color to stand out on the banner */
     z-index: 1;
     /* Ensure content appears above the image */
+}
+
+.banner-contain-about h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+    /*text-shadow: 4px 2px 2px 2px red;*/
+    cursor: pointer;
+    margin: 0;
+    /* Remove default margin */
+}
+
+.banner-contain-about h1::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 0;
+    top: 45%;
+    background-color: red;
+    width: 1%;
+    /* Initial width of the underline */
+    height: 5px;
+    /* Thickness of the underline */
+    z-index: -1;
+    /* Place the line behind the text */
+    transition: width 2s, background-color 0.5s;
+    /* Smooth transition for width and color */
+}
+.banner-contain-about h1:hover::after {
+    width: 20%;
+    /* Expand underline to full width on hover */
+    background-color: blue;
+    /* Change underline color on hover */
 }
