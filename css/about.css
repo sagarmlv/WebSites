@@ -103,15 +103,16 @@
 /* Second Banner */
 #main-contain-about1 {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     background: white !important;
-    
+
 }
+
 .banner-about2 {
     position: relative;
     width: 100%;
-    height:100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -132,10 +133,154 @@
 
 }
 
-.about-lead {
+.about-heading2 p {
+    font-weight: bold;
+}
+
+
+.mission-section {
+    background: #0d146f;
+    color: white;
     position: relative;
-    height: 100vh;
-    width: 100%;
-    padding-bottom: 100px;
+    /* Make sure the section is positioned relative for the overlay to work */
+    padding: 50px;
+    /* Optional padding for content */
+    z-index: 1;
+    cursor: pointer;
+}
+
+.mission-section:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 0, 0, 0.1);
+    /* Semi-transparent red overlay */
+    z-index: -1;
+    /* Ensures the overlay stays behind the content */
+    transition: background-color 0.3s ease;
+    /* Optional transition for hover effect */
+}
+
+.mission-section:hover:after {
+    background-color: rgba(0, 0, 255, 0.1);
+    /* Changes overlay color on hover */
+}
+
+.mission-section h2 {
+    padding: 10px;
+    position: relative;
+    /* Needed to position the :after pseudo-element */
+    display: inline-block;
+    /* Ensures the underline matches the width of the text */
+}
+
+.mission-section h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* Position the underline at the bottom of the h2 element */
+    left: 50%;
+    /* Start the underline from the center */
+    width: 70%;
+    /* Set the underline width to 70% of the h2 width */
+    transform: translateX(-50%);
+    /* Center the underline */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: red;
+    /* Color of the underline */
+    border-radius: 2px;
+    /* Optional: Slight rounding of the line */
+}
+
+.mission-section p {
+    padding-top: 30px;
+    text-align: justify;
+
+}
+
+.vision-section {
     background: white;
+
+    position: relative;
+    /* Make sure the section is positioned relative for the overlay to work */
+    padding: 50px;
+    /* Optional padding for content */
+    z-index: 1;
+    cursor: pointer;
+}
+
+.vision-section h2 {
+    padding: 10px;
+    position: relative;
+    /* Needed to position the :after pseudo-element */
+    display: inline-block;
+    /* Ensures the underline matches the width of the text */
+    font-weight: 500;
+}
+
+.vision-section h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* Position the underline at the bottom of the h2 element */
+    left: 50%;
+    /* Start the underline from the center */
+    width: 70%;
+    /* Set the underline width to 70% of the h2 width */
+    transform: translateX(-50%);
+    /* Center the underline */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: red;
+    /* Color of the underline */
+    border-radius: 2px;
+    /* Optional: Slight rounding of the line */
+}
+
+.vision-section p {
+    padding-top: 30px;
+    text-align: justify;
+
+}
+
+.teams-section {
+    background: #3d30d3c9;
+    position: relative;
+    /* Make sure the section is positioned relative for the overlay to work */
+    padding: 50px;
+    /* Optional padding for content */
+    z-index: 1;
+    color: white;
+    cursor: pointer;
+}
+.teams-section h2 {
+    padding: 10px;
+    position: relative;
+    /* Needed to position the :after pseudo-element */
+    display: inline-block;
+    /* Ensures the underline matches the width of the text */
+    font-weight: 500;
+}
+
+.teams-section h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* Position the underline at the bottom of the h2 element */
+    left: 50%;
+    /* Start the underline from the center */
+    width: 70%;
+    /* Set the underline width to 70% of the h2 width */
+    transform: translateX(-50%);
+    /* Center the underline */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: red;
+    /* Color of the underline */
+    border-radius: 2px;
+    /* Optional: Slight rounding of the line */
 }
