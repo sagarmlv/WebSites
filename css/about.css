@@ -382,8 +382,7 @@
 }
 
 .btn i {
-    font-size: 20px; /* Adjust the icon size */
-   
+    font-size: 20px; /* Adjust the icon size */   
     transition: color 0.3s; /* Smooth transition for color change */
 }
 
