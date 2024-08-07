@@ -1,5 +1,5 @@
 .wave-container-product {
-    height: 0vh;
+    height: 50vh;
     background: rgb(148, 153, 215);
     background: radial-gradient(circle, rgba(148, 153, 215, 1) 2%, rgba(235, 237, 240, 1) 100%);
     position: relative;
@@ -24,3 +24,5 @@
         height: 27px
     }
 }
+
+

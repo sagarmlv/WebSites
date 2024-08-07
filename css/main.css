@@ -620,6 +620,22 @@ body {
     color: #007bff;
     /* Change icon color on hover */
 }
+.footer-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-email i {
+    color: white; /* Adjust icon color */
+    font-size: 18px; /* Adjust icon size */
+}
+
+.footer-email a {
+    color: white; /* Email text color */
+    font-size: 16px; /* Adjust email text size */
+    text-decoration: none; /* Remove underline from link */
+}
 
 /* Optional: Responsive adjustments */
 @media (max-width: 768px) {
