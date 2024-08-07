@@ -1,0 +1,26 @@
+.wave-container-product {
+    height: 0vh;
+    background: rgb(148, 153, 215);
+    background: radial-gradient(circle, rgba(148, 153, 215, 1) 2%, rgba(235, 237, 240, 1) 100%);
+    position: relative;
+}
+
+.wave-container-product::before {
+    content: "";
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  103' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 75L50 71C100 66 200 57 300 38C400 20 500 -8 600 1C700 11 800 57 900 75C1000 94 1100 84 1150 80L1200 75V103H1150C1100 103 1000 103 900 103C800 103 700 103 600 103C500 103 400 103 300 103C200 103 100 103 50 103H0V75Z' fill='%230d146f'/></svg>");
+    animation: waveAnimation 5s linear infinite;
+}
+
+@media(max-width:850px) {
+    .wave-container-product::before {
+        height: 27px
+    }
+}
