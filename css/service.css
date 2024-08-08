@@ -24,3 +24,59 @@
         height: 27px
     }
 }
+
+.services {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.fa-laptop-code, .fa-database, .fa-shield-alt, .fa-desktop, 
+.fa-network-wired, .fa-cloud, .fa-envelope, .fa-code, .fa-globe, 
+.fa-server,.fa-tools {
+    color: #007bff;
+}
+
+.fa-3x {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.text-center .col-md-4 {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+}
