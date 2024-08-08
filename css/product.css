@@ -1,5 +1,5 @@
 .wave-container-product {
-    height: 50vh;
+    height: 0vh;
     background: rgb(148, 153, 215);
     background: radial-gradient(circle, rgba(148, 153, 215, 1) 2%, rgba(235, 237, 240, 1) 100%);
     position: relative;
@@ -27,10 +27,10 @@
 
 
 #Product-intro {
-    position: relative;
-    height: 75vh;
+    position: relative;    
     width: 100%;
     background: white;
+    padding:50px;
 }
 
 .product-intro-img {
@@ -67,6 +67,8 @@
 #product-item {
     position: relative;    
     background: white;
+    padding-bottom: 100px;
+    border-top: black 4px solid;
 }
 
 
