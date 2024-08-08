@@ -116,7 +116,7 @@
     overflow: hidden;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
     
 }
 
@@ -132,16 +132,18 @@
 .about-heading2 {
     position: relative;
     margin-top: 10px;
-    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 }
 
 .about-heading2 .p1 {
     font-size: 18px;
-    color: red;
+    color: blue;
 }
 .about-heading2 h1 {
     font-size: 28px;
     position: relative;
+    margin-bottom: 20px;
 }
 
 
@@ -149,7 +151,11 @@
     font-size: 14px;
     text-align: justify;
 }
-
+.about-heading2 p span {
+    font-size: 16px;
+    color: blue;
+    
+}
 
 .mission-section {
     background: #0d146f;
@@ -169,7 +175,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(255, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0.2);
     /* Semi-transparent red overlay */
     z-index: -1;
     /* Ensures the overlay stays behind the content */
@@ -217,7 +223,6 @@
 
 .vision-section {
     background: white;
-
     position: relative;
     /* Make sure the section is positioned relative for the overlay to work */
     padding: 50px;
