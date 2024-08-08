@@ -105,7 +105,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    background: white !important;
+    background: #f8f9fa !important;
 
 }
 
@@ -114,7 +114,10 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+    
 }
 
 .banner-about2 img {
@@ -129,12 +132,22 @@
 .about-heading2 {
     position: relative;
     margin-top: 10px;
-
-
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
+.about-heading2 .p1 {
+    font-size: 18px;
+    color: red;
+}
+.about-heading2 h1 {
+    font-size: 28px;
+    position: relative;
+}
+
+
 .about-heading2 p {
-    font-weight: bold;
+    font-size: 14px;
+    text-align: justify;
 }
 
 
