@@ -1,5 +1,5 @@
 .wave-container-service {
-    height: 50vh;
+    height: 0vh;
     background: rgb(148, 153, 215);
     background: radial-gradient(circle, rgba(148, 153, 215, 1) 2%, rgba(235, 237, 240, 1) 100%);
     position: relative;
@@ -34,11 +34,13 @@
     border: none;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1) !important;
+    cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 60px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
@@ -52,14 +54,14 @@
 }
 
 .card-text {
-    font-size: 16px;
-    color: #6c757d;
+    font-size: 14px;
+    color: #000000;
 }
 
 .fa-laptop-code, .fa-database, .fa-shield-alt, .fa-desktop, 
 .fa-network-wired, .fa-cloud, .fa-envelope, .fa-code, .fa-globe, 
 .fa-server,.fa-tools {
-    color: #007bff;
+    color: #1212afa8;
 }
 
 .fa-3x {
