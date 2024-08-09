@@ -168,25 +168,6 @@
     cursor: pointer;
 }
 
-.mission-section:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(255, 0, 0, 0.2);
-    /* Semi-transparent red overlay */
-    z-index: -1;
-    /* Ensures the overlay stays behind the content */
-    transition: background-color 0.3s ease;
-    /* Optional transition for hover effect */
-}
-
-.mission-section:hover:after {
-    background-color: rgba(0, 0, 255, 0.1);
-    /* Changes overlay color on hover */
-}
 
 .mission-section h2 {
     padding: 10px;
@@ -420,3 +401,4 @@
 .btn-secondary:hover i {
     color: red; /* Change icon color on hover */
 }
+

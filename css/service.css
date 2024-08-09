@@ -1,5 +1,5 @@
 .wave-container-service {
-    height: 0vh;
+    height: 50vh;
     background: rgb(148, 153, 215);
     background: radial-gradient(circle, rgba(148, 153, 215, 1) 2%, rgba(235, 237, 240, 1) 100%);
     position: relative;
@@ -58,9 +58,17 @@
     color: #000000;
 }
 
-.fa-laptop-code, .fa-database, .fa-shield-alt, .fa-desktop, 
-.fa-network-wired, .fa-cloud, .fa-envelope, .fa-code, .fa-globe, 
-.fa-server,.fa-tools {
+.fa-laptop-code,
+.fa-database,
+.fa-shield-alt,
+.fa-desktop,
+.fa-network-wired,
+.fa-cloud,
+.fa-envelope,
+.fa-code,
+.fa-globe,
+.fa-server,
+.fa-tools {
     color: #1212afa8;
 }
 
@@ -81,4 +89,57 @@
     .card-text {
         font-size: 14px;
     }
+}
+
+#web-development {
+    padding-top: 50px;
+    height: 100vh;
+    background: white;
+}
+
+#networking-services {
+    padding-top: 50px;
+    height: 100vh;
+    background: white;
+}
+
+#cloud-services {
+    padding-top: 50px;
+    height: 100vh;
+    background: white;
+}
+
+#data-recovery-backup {
+    padding-top: 50px;
+    height: 100vh;
+    background: white;
+}
+
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+.accordion-button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.accordion-body {
+    font-size: 1rem;
+    color: #495057;
+    padding: 1rem;
 }
