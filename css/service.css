@@ -92,27 +92,33 @@
 }
 
 #web-development {
-    padding-top: 50px;
+    padding: 20px;
     height: 100vh;
-    background: white;
+    background: #f8f9fa;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
 }
 
 #networking-services {
-    padding-top: 50px;
+    
     height: 100vh;
-    background: white;
+    background: #f8f9fa;
+    border-bottom: 1px solid black;
+
 }
 
 #cloud-services {
     padding-top: 50px;
     height: 100vh;
-    background: white;
+    background: #f8f9fa;
+    border-bottom: 1px solid black;
 }
 
 #data-recovery-backup {
     padding-top: 50px;
     height: 100vh;
-    background: white;
+    background: #f8f9fa;
+    border-bottom: 1px solid black;
 }
 
 
@@ -120,11 +126,17 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
 }
 
 .section-subtitle {
     font-size: 1;
     color: #6c757d;
+    text-align: center;
+    padding-bottom: 20px;
+    color: white;
 }
 
 .accordion-button {
