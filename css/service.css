@@ -93,15 +93,16 @@
 
 #web-development {
     padding: 20px;
-    height: 100vh;
+    height: auto;
     background: #f8f9fa;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+    
 }
 
 #networking-services {
 
-    height: 100vh;
+    height: auto;
     background: #f8f9fa;
     border-bottom: 1px solid black;
 
@@ -109,14 +110,14 @@
 
 #cloud-services {
     padding-top: 50px;
-    height: 100vh;
+    height: auto;
     background: #f8f9fa;
     border-bottom: 1px solid black;
 }
 
 #data-recovery-backup {
     padding-top: 50px;
-    height: 100vh;
+    height: auto;
     background: #f8f9fa;
     
 }
