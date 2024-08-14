@@ -340,6 +340,74 @@ body {
 
 }
 
+#service-part {
+    background-color: white;
+    position: relative;
+    padding: 50px !important;
+}
+.heading-ser {
+    position: relative;
+}
+
+.heading-ser p {
+    color: red;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.heading-ser h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.btn-service-redirect {
+    width: 200px;
+    height: 50px;
+    background-color: red !important;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+}
+.btn-service-redirect:hover {
+    background-color: blueviolet;
+    color: white;
+    transition: 2s easy;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.card i {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .card i {
+        font-size: 2.5rem;
+    }
+}
 
 
 
@@ -364,7 +432,7 @@ body {
 }
 
 .wave-container {
-    height: 50vh;
+    height: 100vh;
     background-color: rgba(155, 168, 168, 0.97);
     position: relative;
 }
@@ -388,6 +456,7 @@ body {
         height: 27px
     }
 }
+
 
 
 
