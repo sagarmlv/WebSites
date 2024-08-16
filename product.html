@@ -72,10 +72,74 @@
                 </div>
             </div>
         </section>
+        <section id="all-pro" class="container-fluid p-5">
+            <div class="container">
+                <div class="navbar-pro">
+                    <button class="btn-toggle" data-target="wifi-section">Wifi</button>
+                    <button class="btn-toggle" data-target="printer-section">Printer</button>
+                    <button class="btn-toggle" data-target="camera-section">Camera</button>
+                    <button class="btn-toggle" data-target="laptop-section">Laptop</button>
+                </div>
+                <!-- Sections to be shown/hidden based on button clicks -->
+                <div id="wifi-section" class="content-section active">
+                    <h3>UniFi Wi-Fi Solutions</h3>
+                    <p>Explore our range of high-performance Wi-Fi products designed for various environments.</p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="video-container">
+                                <video autoplay muted loop controls>
+                                    <source src="./Images/Product Images/Wifi.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="printer-section" class="content-section">
+                    <h3>Printer Information</h3>
+                    <p>Details about Printer services.</p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="video-container">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="camera-section" class="content-section">
+                    <h3>Camera Information</h3>
+                    <p>Details about Camera services.</p>
+                </div>
+                <div id="laptop-section" class="content-section">
+                    <h3>Laptop Information</h3>
+                    <p>Details about Laptop services.</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const buttons = document.querySelectorAll(".btn-toggle");
+                const sections = document.querySelectorAll(".content-section");
+
+
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            // Hide all sections
+            sections.forEach(section => section.classList.remove("active"));
+
+            // Show the targeted section
+            const targetSection = document.getElementById(button.getAttribute("data-target"));
+            targetSection.classList.add("active");
+        });
+    });
+});
+
+        </script>
         <section id="product-item">
             <!-- Product Section -->
-            <div class="container mt-5">
-                <h2 class="text-center mb-4">Our IT Products</h2>
+            <div class="container pt-5">
+                <h2 class="text-center mb-4 p-5">Our IT Products</h2>
                 <div class="row">
                     <!-- Laptops Card -->
                     <div class="col-md-4">

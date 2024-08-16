@@ -25,12 +25,89 @@
     }
 }
 
+/* Contain products */
+
+#all-pro {
+    background-color: white;
+    position: relative;
+
+
+}
+
+.navbar-pro {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.btn-toggle {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.btn-toggle:hover {
+    background-color: #0056b3;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+
+/* WIFI */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio (9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    border: 0;
+}
+
+.product-section {
+    margin-bottom: 40px;
+}
+
+.product-section h3 {
+    margin-top: 20px;
+}
+
+.product-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-section ul li {
+    margin-bottom: 10px;
+}
+
+
 
 #Product-intro {
-    position: relative;    
+    position: relative;
     width: 100%;
     background-color: #f8f9fa;
-    padding:50px;
+    padding: 50px;
 }
 
 .product-intro-img {
@@ -65,11 +142,12 @@
 /* Product Item */
 
 #product-item {
-    position: relative;    
-    background-color: #f8f9fa;
+    position: relative;
+    background-color: white;
     padding-bottom: 100px;
-    border-top: black 4px solid;
+    
 }
+
 .card {
     border: none;
     border-radius: 8px;
@@ -77,6 +155,7 @@
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
 }
+
 .card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
@@ -98,6 +177,7 @@
     height: 200px;
     object-fit: cover;
 }
+
 .card-img-top:hover {
     opacity: 0.8;
 }
@@ -120,6 +200,7 @@
     overflow: hidden;
     text-align: center;
 }
+
 .product-item-img img {
     position: relative;
     object-fit: cover;
@@ -131,15 +212,16 @@
 .btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center; 
-    width: 100px;   
+    justify-content: center;
+    width: 100px;
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     color: white;
-    margin: 10px; /* Space between buttons */
+    margin: 10px;
+    /* Space between buttons */
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -169,23 +251,29 @@
 }
 
 .btn i {
-    font-size: 20px; /* Adjust the icon size */   
-    transition: color 0.3s; /* Smooth transition for color change */
+    font-size: 20px;
+    /* Adjust the icon size */
+    transition: color 0.3s;
+    /* Smooth transition for color change */
 
 }
 
 .btn-primary i {
-    color: white; /* Icon color for primary button */
+    color: white;
+    /* Icon color for primary button */
 }
 
 .btn-primary:hover i {
-    color: red; /* Change icon color on hover */
+    color: red;
+    /* Change icon color on hover */
 }
 
 .btn-secondary i {
-    color: white; /* Icon color for secondary button */
+    color: white;
+    /* Icon color for secondary button */
 }
 
 .btn-secondary:hover i {
-    color: red; /* Change icon color on hover */
+    color: red;
+    /* Change icon color on hover */
 }
