@@ -30,6 +30,44 @@
     padding: 50px 0;
 }
 
+.heading-service {
+    position: relative;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.heading-service span {
+    color: blue;
+    display: inline-block;
+    position: relative;
+}
+
+.heading-service span:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: blue;
+    transform: scaleX(0);
+    /* Initially hide the line */
+    transform-origin: left;
+    /* Ensure the line scales from left to right */
+    transition: transform 1.5s ease;/
+}
+
+.heading-service span:hover::before {
+    transform: scaleX(1);
+    /* Show the line on hover */
+}
+
+
+
 .card {
     border: none;
     border-radius: 10px;
@@ -93,15 +131,126 @@
 
 #web-development {
     padding: 20px;
-    height: 100vh;
+    height: auto;
     background: #f8f9fa;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
+
 }
+
+
+/* exprerience section */
+
+
+.display-1 {
+    font-size: 8rem;
+    color: #D2B48C;
+    /* Light brown color */
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.lead {
+    font-size: 1.25rem;
+    color: #999;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.text-primary {
+    color: #007bff;
+}
+
+.specialize-text {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.availability-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2rem;
+}
+
+
+.services-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+    font-size: 2.5rem;
+    color: #D2B48C;
+    /* Light brown color */
+}
+
+.service-card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.counters-section {
+    padding: 2rem 0;
+}
+
+.counter-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.counter-card h1 {
+    color: #007bff;
+    /* Blue color for numbers */
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.counter-card p {
+    color: #D2B48C;
+    /* Light brown color */
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.counter-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
 
 #networking-services {
 
-    height: 100vh;
+    height: auto;
     background: #f8f9fa;
     border-bottom: 1px solid black;
 
@@ -109,16 +258,16 @@
 
 #cloud-services {
     padding-top: 50px;
-    height: 100vh;
+    height: auto;
     background: #f8f9fa;
     border-bottom: 1px solid black;
 }
 
 #data-recovery-backup {
     padding-top: 50px;
-    height: 100vh;
+    height: auto;
     background: #f8f9fa;
-    
+
 }
 
 
@@ -181,6 +330,7 @@
     object-fit: cover;
     object-position: center;
 }
+
 .banner-service4 {
     position: relative;
     width: 90%;
@@ -192,6 +342,7 @@
     padding: 5px;
 
 }
+
 .banner-service4 img {
     position: relative;
     width: 90%;

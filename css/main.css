@@ -4,11 +4,11 @@
     margin: 0;
     letter-spacing: 2px;
     font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth"100;
 }
 
 :root {
@@ -16,8 +16,7 @@
 }
 
 body {
-    background: rgb(148, 153, 215);
-    background: radial-gradient(circle, rgba(148, 153, 215, 1) 2%, rgba(235, 237, 240, 1) 100%);
+    
 }
 
 /* Header Navbar */
@@ -331,15 +330,95 @@ body {
 /* Our Services */
 
 .service-heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
 
 }
 
+#service-part {
+    background-color: white;
+    position: relative;
+    padding: 50px !important;
+}
+
+.heading-ser {
+    position: relative;
+}
+
+.heading-ser p {
+    color: red;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.heading-ser h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.btn-service-redirect {
+    width: 200px;
+    height: 50px;
+    background-color: red !important;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.btn-service-redirect:hover {
+    background-color: blueviolet;
+    color: white;
+    transition: 2s easy;
+}
+
+.card-body {
+    padding: 30px !important;
+    background: #f3f3f3;
+    border-radius: 10px;
+    height: 250px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.card i {
+    color: #007bff;
+}
+.card-body:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    text-replace: 2s esay;
+}
+
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .card i {
+        font-size: 2.5rem;
+    }
+}
 
 
 
@@ -364,7 +443,7 @@ body {
 }
 
 .wave-container {
-    height: 50vh;
+    height: 100vh;
     background-color: rgba(155, 168, 168, 0.97);
     position: relative;
 }
@@ -388,6 +467,7 @@ body {
         height: 27px
     }
 }
+
 
 
 
@@ -432,8 +512,9 @@ body {
     border-bottom: 1px solid #ccc;
 
 }
+
 .footer-header1 h3 {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 
@@ -621,6 +702,7 @@ body {
     color: #007bff;
     /* Change icon color on hover */
 }
+
 .footer-email {
     display: flex;
     align-items: center;
@@ -628,14 +710,19 @@ body {
 }
 
 .footer-email i {
-    color: white; /* Adjust icon color */
-    font-size: 18px; /* Adjust icon size */
+    color: white;
+    /* Adjust icon color */
+    font-size: 18px;
+    /* Adjust icon size */
 }
 
 .footer-email a {
-    color: white; /* Email text color */
-    font-size: 16px; /* Adjust email text size */
-    text-decoration: none; /* Remove underline from link */
+    color: white;
+    /* Email text color */
+    font-size: 16px;
+    /* Adjust email text size */
+    text-decoration: none;
+    /* Remove underline from link */
 }
 
 /* Optional: Responsive adjustments */
