@@ -378,9 +378,9 @@ body {
 
 .card-body {
     padding: 30px !important;
-    background: #f3f3f3;
+    background: #f3f3f300;
     border-radius: 10px;
-    height: 250px;
+    height: 350px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
 }
@@ -398,7 +398,14 @@ body {
 }
 
 .card i {
-    color: #007bff;
+    color: #337dcd;
+    border: 2px solid lightgrey;
+    padding: 20px;
+    font-size: 42px;
+    border-radius: 50%;
+    background: #f7ffff;
+    box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.5);
+}
 }
 .card-body:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
