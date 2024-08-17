@@ -105,7 +105,7 @@
 
 #success-wrappar {
     position: relative;
-    
+
 }
 
 .head-section-exp {
@@ -114,17 +114,20 @@
     display: block;
     text-align: center;
 }
+
 .head-section-exp p {
     font-size: 16px;
     padding: 10px;
     margin-top: 30px;
 
 }
+
 .head-section-exp h1 {
     font-size: 30px;
 
 }
-.head-section-exp h1 span{
+
+.head-section-exp h1 span {
     color: blue;
 }
 
@@ -175,6 +178,7 @@ h2 {
     font-weight: 700;
     margin-bottom: 2rem;
 }
+
 h2 span {
     color: blue;
 }
@@ -195,11 +199,13 @@ h2 span {
     transform: translateY(-10px);
     text-replace: 2s esay;
 }
+
 .icon-container {
     font-size: 2rem;
     color: #007bff;
     /* Light brown color */
 }
+
 .icon-container i {
     padding: 10px;
     font-size: 40px;
@@ -217,8 +223,74 @@ h2 span {
     margin-top: 0.5rem;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; /* Space between cards */
+    padding: 2rem; /* Padding around the container */
+}
 
+.ser-card {
+    width: 18rem;
+   
+    border: 1px solid #ddd;
+    /* Border color */
+    border-radius: 0.5rem;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    overflow: hidden;
+    /* Ensures content does not overflow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transitions */
+    background-color: #fff;
+    /* Card background color */
+}
 
+.ser-card-body {
+    
+}
+
+.card-icon {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.ser-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.ser-card-text {
+    font-size: 14px;
+    color: #555; /* Dark grey text color */
+    margin-bottom: 1rem;
+}
+
+.ser-card-btn {
+    background-color: #007bff; /* Button background color */
+    border-color: #007bff; /* Button border color */
+    color: #fff; /* Button text color */
+    padding: 0.5rem 1rem; /* Padding inside the button */
+    border-radius: 0.25rem; /* Rounded button corners */
+    text-align: center; /* Center text inside button */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Button display style */
+}
+
+/* Button hover effect */
+.ser-card-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #004085; /* Darker border color on hover */
+}
+
+/* Card hover effect */
+.ser-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
 
 
 /* Second Banner */
@@ -238,7 +310,7 @@ h2 span {
     border-radius: 10px;
     text-align: center;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
-    
+
 }
 
 .banner-about2 img {
@@ -261,6 +333,7 @@ h2 span {
     font-size: 18px;
     color: blue;
 }
+
 .about-heading2 h1 {
     font-size: 28px;
     position: relative;
@@ -272,10 +345,11 @@ h2 span {
     font-size: 14px;
     text-align: justify;
 }
+
 .about-heading2 p span {
     font-size: 16px;
     color: blue;
-    
+
 }
 
 .mission-section {
@@ -377,6 +451,7 @@ h2 span {
     color: white;
     cursor: pointer;
 }
+
 .teams-section h2 {
     padding: 10px;
     position: relative;
@@ -449,15 +524,16 @@ h2 span {
 .btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center; 
-    width: 100px;   
+    justify-content: center;
+    width: 100px;
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     color: white;
-    margin: 10px; /* Space between buttons */
+    margin: 10px;
+    /* Space between buttons */
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -488,7 +564,8 @@ h2 span {
 
 /* Optional: Specific styles for the image container */
 .member-img {
-    height: 200px; /* Adjust height as needed */
+    height: 200px;
+    /* Adjust height as needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -496,30 +573,35 @@ h2 span {
 }
 
 .member-img img {
-    padding:10px;
+    padding: 10px;
     width: 50%;
     height: 100%;
     object-fit: cover;
 }
 
 .btn i {
-    font-size: 20px; /* Adjust the icon size */   
-    transition: color 0.3s; /* Smooth transition for color change */
+    font-size: 20px;
+    /* Adjust the icon size */
+    transition: color 0.3s;
+    /* Smooth transition for color change */
 }
 
 .btn-primary i {
-    color: white; /* Icon color for primary button */
+    color: white;
+    /* Icon color for primary button */
 }
 
 .btn-primary:hover i {
-    color: red; /* Change icon color on hover */
+    color: red;
+    /* Change icon color on hover */
 }
 
 .btn-secondary i {
-    color: white; /* Icon color for secondary button */
+    color: white;
+    /* Icon color for secondary button */
 }
 
 .btn-secondary:hover i {
-    color: red; /* Change icon color on hover */
+    color: red;
+    /* Change icon color on hover */
 }
-
