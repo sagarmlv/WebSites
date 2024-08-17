@@ -380,7 +380,7 @@ body {
     padding: 30px !important;
     background: #f3f3f300;
     border-radius: 10px;
-    height: 300px;
+    height: 350px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
 }
@@ -400,8 +400,8 @@ body {
 .card i {
     color: #337dcd;
     border: 2px solid lightgrey;
-    padding: 10px;
-    font-size: 26px;
+    padding: 20px;
+    font-size: 42px;
     border-radius: 50%;
     background: #f7ffff;
     box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.5);
