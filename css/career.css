@@ -25,6 +25,142 @@
     }
 }
 
+/* Basic Styling */
+#career-discription {
+    background-color: #f4f8fb;
+    padding: 50px 0;
+}
+
+.career-heading {
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+.career-heading h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.career-heading h1 span {
+    color: #007bff;
+}
+
+.job-name h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.job-description p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.job-redirection .btn {
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.job-redirection .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-name h2 {
+        font-size: 20px;
+    }
+
+    .job-description p {
+        font-size: 14px;
+    }
+
+    .job-redirection .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Animation */
+.job-name h2,
+.job-description p,
+.job-redirection .btn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.job-name h2 {
+    animation-delay: 0.2s;
+}
+
+.job-description p {
+    animation-delay: 0.4s;
+}
+
+.job-redirection .btn {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Line Hover Effect on Button */
+.job-redirection .btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.4s ease;
+}
+
+.job-redirection .btn:hover::after {
+    width: 100%;
+    transition: width 0.4s ease;
+}
+
+/* Section Animation */
+#career-discription {
+    opacity: 0;
+    animation: fadeInSection 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
 
 #footer-career-part {
     height: 100vh;
