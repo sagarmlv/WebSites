@@ -1,0 +1,275 @@
+
+
+.wave-container-career {
+    height: 0vh;    
+    position: relative;
+}
+
+.wave-container-career::before {
+    content: "";
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    bottom: -0.3%;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  103' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 75L50 71C100 66 200 57 300 38C400 20 500 -8 600 1C700 11 800 57 900 75C1000 94 1100 84 1150 80L1200 75V103H1150C1100 103 1000 103 900 103C800 103 700 103 600 103C500 103 400 103 300 103C200 103 100 103 50 103H0V75Z' fill='%230d146f'/></svg>");
+    animation: waveAnimation 5s linear infinite;
+}
+
+@media(max-width:850px) {
+    .wave-container-career::before {
+        height: 27px
+    }
+}
+
+/* Basic Styling */
+#career-discription {
+    background-color: #f4f8fb;
+    padding: 50px 0;
+}
+
+.career-heading {
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+.career-heading h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.career-heading h1 span {
+    color: #007bff;
+}
+
+.job-name h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.job-description p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.job-redirection .btn {
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.job-redirection .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-name h2 {
+        font-size: 20px;
+    }
+
+    .job-description p {
+        font-size: 14px;
+    }
+
+    .job-redirection .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Animation */
+.job-name h2,
+.job-description p,
+.job-redirection .btn {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.job-name h2 {
+    animation-delay: 0.2s;
+}
+
+.job-description p {
+    animation-delay: 0.4s;
+}
+
+.job-redirection .btn {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Line Hover Effect on Button */
+.job-redirection .btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.4s ease;
+}
+
+.job-redirection .btn:hover::after {
+    width: 100%;
+    transition: width 0.4s ease;
+}
+
+/* Section Animation */
+#career-discription {
+    opacity: 0;
+    animation: fadeInSection 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+#footer-career-part {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #f4f8fbdb;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+.career-con-contain h3 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 20px;
+
+}
+
+.career-con-contain h3 span {
+    color: #007bff; /* Highlighted text color */
+}
+
+.career-con-quite p {
+    font-size: 16px;
+    color: #6c757d; /* Text color */
+    margin-bottom: 5px;
+}
+
+.career-con-contain2 {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.career-con-icon i {
+    font-size: 50px;
+    color: #007bff; /* Icon color */
+    margin-bottom: 20px;
+    transition: all 2s ease;
+
+}
+.career-con-icon i:hover {
+    font-size: 51px;
+    color: red; 
+    
+}
+
+.career-con-p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.career-number a,
+.career-email a {
+    font-size: 24px;
+    color: #007bff;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: all 1s ease;
+}
+
+.career-number a:hover,
+.career-email a:hover {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .career-con-contain h3 {
+        font-size: 24px;
+    }
+
+    .career-con-contain2 {
+        padding: 20px;
+    }
+
+    .career-con-icon i {
+        font-size: 40px;
+    }
+
+    .career-number a,
+    .career-email a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .career-con-contain h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .career-con-quite p {
+        text-align: center;
+    }
+
+    .career-con-contain2 {
+        margin-top: 30px;
+    }
+
+    .career-number a,
+    .career-email a {
+        font-size: 18px;
+    }
+}
