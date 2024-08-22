@@ -526,6 +526,7 @@ h2 span {
     border: none;
     border-radius: 8px;
     overflow: hidden;
+    padding: 0 !important;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -547,13 +548,13 @@ h2 span {
 
 
 .card-body {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
 .card-title {
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    
 }
 
 .card-text {
@@ -561,7 +562,7 @@ h2 span {
     color: #555;
 }
 
-.btn {
+.cust-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -577,30 +578,33 @@ h2 span {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    text-align: center;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.btn-secondary {
-    background-color: #007bff !important;
-    border: none;
-    text-align: center;
-}
-
-.btn-secondary:hover {
+.cust-btn:hover {
     background-color: #0056b3;
 }
 
 /* Optional: Add a subtle hover effect */
-.btn:hover {
+.cust-btn:hover {
     transform: scale(1.05);
 }
+
+.cust-btn .i-pro {
+    font-size: 20px;
+    /* Adjust the icon size */
+    transition: color 0.3s;
+    /* Smooth transition for color change */
+
+}
+
+.cust-btn .i-pro {
+    color: blue;
+    /* Icon color for primary button */
+}
+
+.cust-btn:hover .i-pro {
+    color: red;
+    /* Change icon color on hover */
+}
+
 
 /* Optional: Specific styles for the image container */
 .member-img {
@@ -619,29 +623,29 @@ h2 span {
     object-fit: cover;
 }
 
-.btn i {
+.cust-btn i {
     font-size: 20px;
     /* Adjust the icon size */
     transition: color 0.3s;
     /* Smooth transition for color change */
 }
 
-.btn-primary i {
-    color: white;
+.cust-btn i {
+    color: blue;
     /* Icon color for primary button */
 }
 
-.btn-primary:hover i {
+.cust-btn:hover i {
     color: red;
     /* Change icon color on hover */
 }
 
-.btn-secondary i {
-    color: white;
+.cust-btn i {
+    color: blue;
     /* Icon color for secondary button */
 }
 
-.btn-secondary:hover i {
+.cust-btn:hover i {
     color: red;
     /* Change icon color on hover */
 }
