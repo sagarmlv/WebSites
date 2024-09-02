@@ -340,9 +340,9 @@ body {
 }
 
 #service-part {
-    background-color: white;
+    background-color: #ede7e7b8;
     position: relative;
-    padding: 50px !important;
+    
 }
 
 .heading-ser {
@@ -429,6 +429,80 @@ body {
 
 
 
+#service-gallery {
+    background-color: #f4f8fb;
+    padding: 50px 0;
+    height: 100vh;
+    position: relative;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: rotateY(180deg);
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.gallery-item:hover .gallery-text {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+.gallery-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.gallery-text p {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-item img {
+        height: 300px;
+    }
+
+    .gallery-text h3 {
+        font-size: 20px;
+    }
+
+    .gallery-text p {
+        font-size: 14px;
+    }
+}
 
 
 
@@ -450,7 +524,7 @@ body {
 }
 
 .wave-container {
-    height: 100vh;
+    height: 0vh;
     background-color: rgba(155, 168, 168, 0.97);
     position: relative;
 }
@@ -482,7 +556,7 @@ body {
     position: relative;
     background-color: #f4f8fb;
     width: 100%;
-    height: 100vh;
+    
 
 }
 
