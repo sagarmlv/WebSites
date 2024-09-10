@@ -15,9 +15,7 @@
     --bg-color: #0d146f;
 }
 
-body {
-    
-}
+body {}
 
 /* Header Navbar */
 .header {
@@ -342,15 +340,17 @@ body {
 #service-part {
     background-color: #ede7e7b8;
     position: relative;
-    
+
 }
 
 .heading-ser {
     position: relative;
+    
 }
 
 .heading-ser p {
     color: red;
+    margin-top: 20px;
     letter-spacing: 2px;
     font-size: 18px;
 }
@@ -407,6 +407,7 @@ body {
     box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.5);
 }
 }
+
 .card-body:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
@@ -431,8 +432,7 @@ body {
 
 #service-gallery {
     background-color: #f4f8fb;
-    padding: 50px 0;
-    height: 100vh;
+    margin-bottom: 50px;  
     position: relative;
 }
 
@@ -556,7 +556,7 @@ body {
     position: relative;
     background-color: #f4f8fb;
     width: 100%;
-    
+
 
 }
 
