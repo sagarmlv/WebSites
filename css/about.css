@@ -21,74 +21,141 @@
 
 @media(max-width:850px) {
     .wave-container-about::before {
-        height: 27px
+        height: 27px;
     }
 }
 
-#main-contain-about {
-    width: 100%;
-    height: 50vh;
+.about-us {    
     position: relative;
-    background-color: #8080802b;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    
+    background-color: #80808012;
+}
+
+.about-left {
+    position: relative;
+}
+
+.about-left h1 {
+    font-size: 80px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.about-left .contain-about {
+    font-size: 13px;
+    text-align: justify;
+    margin-bottom: 30px;
+    padding-right: 60px;
+
+}
+
+.about-left h2 {
+    font-size: 32px;
+    padding: 0;
+    margin-top: 50px;
+    padding-bottom: 20px;
 }
 
 
+.about-right {
+    border: 2px solid #0056ff;
+    border-radius: 20px;
+    position: relative;
+    padding-top: 50px;
 
-.banner-contain-about {
+}
+
+.number-box {
+    background-color: #0056ff;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    /* Align content to the left */
-    position: relative;
-    text-align: left;   
-   
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
 }
 
+.mission1,
+.mission2,
+.mission3 {
+    padding-right: 40px;
+    padding-left: 40px;
+}
 
-.banner-contain-about h1 {
-    font-size: 40px;
-    letter-spacing: 2px;
-    text-align: left;
-    /*text-shadow: 4px 2px 2px 2px red;*/
-    cursor: pointer;
-    margin: 0;
+.mission1 p,
+.mission2 p,
+.mission3 p {
+    font-size: 14px;
+    padding-top: 10px;
+    text-align: justify;
+}
 
-    /* Remove default margin */
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-right {
+        margin-top: 30px;
+    }
+}
+
+.offer-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+}
+
+.offer-description {
+    font-size: 14px;
+    color: #555;
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.ul-about {
+    padding-left: 0;
+}
+.ul-about-list {
+    font-size: 18px;
+    color: #000;
     margin-bottom: 20px;
-
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
 }
 
-.banner-contain-about h1::after {
-    content: "";
-    position: absolute;
-    left: 10px;
-    right: 0;
-    top: 35%;
-    background-color: red;
-    width: 1%;
-    /* Initial width of the underline */
-    height: 5px;
-    /* Thickness of the underline */
-    z-index: -1;
-    /* Place the line behind the text */
-    transition: width 2s, background-color 0.5s;
-    /* Smooth transition for width and color */
+.ul-about-list i {
+    color: #0056ff;
+    font-size: 20px;
+    margin-right: 10px;
 }
 
-.banner-contain-about h1:hover::after {
-    width: 40%;
-    /* Expand underline to full width on hover */
-    background-color: blue;
-    /* Change underline color on hover */
+.ul-about-list span {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-top: 5px;
 }
 
+/* Hover Effect */
+.ul-about-list:hover {
+    background-color: #f0f8ff;
+    color: #0056ff;
+    cursor: pointer;
+}
 
+.ul-about-list:hover i {
+    color: #003bb3;
+}
 
+/* Responsive Design */
+@media (max-width: 992px) {
+    .offer-description {
+        font-size: 16px;
+    }
+}
 
 
 /* Experiences */
@@ -300,15 +367,17 @@ h2 span {
 
 .banner-about2 {
     position: relative;
-    width: 100%; /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
+    width: 100%;
+    /* Adjust as needed */
+    height: 100%;
+    /* Adjust as needed */
     overflow: hidden;
     border-radius: 50%;
     text-align: center;
     border: 5px solid transparent;
     animation: borderAnimation 5s infinite;
 
-    }
+}
 
 .banner-about2 img {
     position: relative;
@@ -318,10 +387,14 @@ h2 span {
     object-position: center;
     animation: zoomAnimation 5s infinite;
 }
+
 @keyframes zoomAnimation {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
@@ -331,15 +404,19 @@ h2 span {
     0% {
         border-color: #ffcc00;
     }
+
     25% {
         border-color: #00ccff;
     }
+
     50% {
         border-color: #ff66cc;
     }
+
     75% {
         border-color: #66ff66;
     }
+
     100% {
         border-color: #ffcc00;
     }
@@ -349,7 +426,7 @@ h2 span {
 .about-heading2 {
     position: relative;
     margin-top: 10px;
-    
+
     border-radius: 5px;
 }
 
@@ -538,7 +615,7 @@ h2 span {
 
 .card-title {
     font-size: 1.25rem;
-    
+
 }
 
 .card-text {
