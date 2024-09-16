@@ -72,6 +72,63 @@
     color: #666;
 }
 
+.offer-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+}
+
+.offer-description {
+    font-size: 14px;
+    color: #555;
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.ul-about {
+    padding-left: 0;
+}
+.ul-about-list {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.ul-about-list i {
+    color: #0056ff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.ul-about-list span {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Hover Effect */
+.ul-about-list:hover {
+    background-color: #f0f7ff;
+    color: #0056ff;
+    cursor: pointer;
+}
+
+.ul-about-list:hover i {
+    color: #003bb3;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .offer-description {
+        font-size: 16px;
+    }
+}
+
 
 .our-serv-section {
     position: relative;

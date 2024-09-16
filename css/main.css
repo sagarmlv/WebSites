@@ -516,8 +516,7 @@ body {}
 
 
 #service-gallery {
-    background-color: #f4f8fb;
-    margin-bottom: 50px;  
+    background-color: #f4f8fb;      
     position: relative;
 }
 
@@ -592,9 +591,28 @@ body {}
 
 .testimonial {
     background-color: whitesmoke;
+    margin-bottom: 50px;
 }
 
+.testimonial-heading {
+    position: relative;
+    padding: 20px;
+}
+.testimonial-heading h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
 
+}
+.testimonial-heading p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.logo-companies {
+    position: relative;
+    margin-top: 20px;
+}
 
 
 
