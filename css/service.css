@@ -5,30 +5,193 @@
     position: relative;
 }
 
-.wave-container-service::before {
-    content: "";
-    width: 100%;
-    height: 75px;
-    position: absolute;
-    bottom: -0.3%;
-    left: 0;
-    background-size: auto;
-    background-repeat: repeat-x;
-    background-position: 0 bottom;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  103' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 75L50 71C100 66 200 57 300 38C400 20 500 -8 600 1C700 11 800 57 900 75C1000 94 1100 84 1150 80L1200 75V103H1150C1100 103 1000 103 900 103C800 103 700 103 600 103C500 103 400 103 300 103C200 103 100 103 50 103H0V75Z' fill='%230d146f'/></svg>");
-    animation: waveAnimation 5s linear infinite;
+.wave-container-service::before {   
+  content: "";
+  width: 100%;
+  height: 68px;
+  position: absolute;
+  bottom: -0.3%;
+  left: 0;
+  background-size: auto;
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  89' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 65L50 61C100 57 200 49 300 33C400 17 500 -7 600 1C700 9 800 49 900 65C1000 81 1100 73 1150 69L1200 65V90H1150C1100 90 1000 90 900 90C800 90 700 90 600 90C500 90 400 90 300 90C200 90 100 90 50 90H0V65Z' fill='%230000ff'/></svg>");
+  animation: waveAnimation 5s linear infinite;
 }
 
 @media(max-width:850px) {
-    .wave-container-service::before {
-        height: 27px
+  .wave-container-service::before {    
+    height: 34px
+  }  
+}
+.our-serv-section {
+    padding: 50px 0;
+}
+
+.serv-heading h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.our-service-card {
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.number-box {
+    background-color: #0056ff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #666;
+}
+
+.offer-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+}
+
+.offer-description {
+    font-size: 14px;
+    color: #555;
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.ul-about {
+    padding-left: 0;
+}
+.ul-about-list {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.ul-about-list i {
+    color: #0056ff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.ul-about-list span {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Hover Effect */
+.ul-about-list:hover {
+    background-color: #f0f7ff;
+    color: #0056ff;
+    cursor: pointer;
+}
+
+.ul-about-list:hover i {
+    color: #003bb3;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .offer-description {
+        font-size: 16px;
     }
 }
+
+
+.our-serv-section {
+    position: relative;
+    padding: 50px;
+    background-color: #80808012;
+}
+
+.serv-heading h1 {
+    font-size: 80px;
+    font-weight: 700;
+}
+.Our-ser-list1 {
+    position: relative;
+    margin-top: 30px;
+}
+.number-box {
+    background-color: #0056ff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+.mission1-contain {
+    position: relative;
+
+
+}
+.mission1 {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    cursor: pointer;
+}
+.mission1:hover {
+    transform: translateY(-5px); /* Lifts the container slightly */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.mission1-contain h3 {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+.mission1-contain p {
+    font-size: 16px;
+    text-align: justify;
+    padding-right: 50px;
+    padding-top:10px ;
+}
+
 
 .services {
     background-color:#f8f9fa8c;
     
 }
+
+
+
 
 .heading-service {
     position: relative;
@@ -152,31 +315,32 @@
     font-size: 14px;
     text-align: justify;
 }
-
-.card {
-    border: none;
+/*
+.service-card {
+    
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.4) !important;
     cursor: pointer;
+    background-color: whitesmoke !important;
 }
 
-.card:hover {
+.service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 60px 20px rgba(0, 0, 0, 0.1);
 }
 
-.card-body {
+.card-body-ser {
     padding: 20px;
 }
 
-.card-title {
+.card-body-ser h4 {
     font-size: 20px;
     font-weight: 600;
     margin-top: 10px;
 }
 
-.card-text {
+.card-body-ser p {
     font-size: 14px;
     color: #000000;
 }
@@ -213,7 +377,7 @@
         font-size: 14px;
     }
 }
-
+*/
 #web-development {
     padding: 20px;
     height: auto;

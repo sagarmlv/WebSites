@@ -15,14 +15,12 @@
     --bg-color: #0d146f;
 }
 
-body {
-    
-}
+body {}
 
 /* Header Navbar */
 .header {
     position: relative;
-    background-color: #0d146f;
+    background-color: blue;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
 
 }
@@ -340,30 +338,65 @@ body {
 }
 
 #service-part {
-    background-color: white;
+    background-color: #e7e7e7ed;
     position: relative;
-    padding: 50px !important;
+
 }
 
 .heading-ser {
     position: relative;
+    
 }
 
 .heading-ser p {
-    color: red;
+    color: blue;
+    margin-top: 20px;
     letter-spacing: 2px;
     font-size: 18px;
 }
 
 .heading-ser h1 {
-    font-size: 40px;
+    font-size: 48px;
     letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.our-service-list {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.our-list {
+    width: 30%;
+    height:auto;
+    margin: auto;
+    padding: 20px;
+}
+.number-box {
+    background-color: #0056ff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+.our-list-contain {
+
 }
 
 .btn-service-redirect {
     width: 200px;
     height: 50px;
-    background-color: red !important;
+    background-color: blue !important;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -371,10 +404,62 @@ body {
 }
 
 .btn-service-redirect:hover {
-    background-color: blueviolet;
+    background-color: red;
     color: white;
     transition: 2s easy;
 }
+.ser-in {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.card1 {
+    background-color: white;
+    padding: 20px;
+    height: 200px;
+    max-height: 250px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+.card-body1 {
+    border-radius: 10px;
+    
+}
+.card-title1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.card-text1 {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 10px;
+}
+.card1:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    text-replace: 2s esay;
+}
+
+@media (max-width: 1000px) {
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.5rem;
+    }
+
+}
+
+
+
 
 .card-body {
     padding: 30px !important;
@@ -407,6 +492,7 @@ body {
     box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.5);
 }
 }
+
 .card-body:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
@@ -429,8 +515,104 @@ body {
 
 
 
+#service-gallery {
+    background-color: #f4f8fb;      
+    position: relative;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: rotateY(180deg);
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.gallery-item:hover .gallery-text {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+.gallery-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.gallery-text p {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-item img {
+        height: 300px;
+    }
+
+    .gallery-text h3 {
+        font-size: 20px;
+    }
+
+    .gallery-text p {
+        font-size: 14px;
+    }
+}
 
 
+.testimonial {
+    background-color: whitesmoke;
+    margin-bottom: 50px;
+}
+
+.testimonial-heading {
+    position: relative;
+    padding: 20px;
+}
+.testimonial-heading h2 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+.testimonial-heading p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.logo-companies {
+    position: relative;
+    margin-top: 20px;
+}
 
 
 
@@ -450,31 +632,32 @@ body {
 }
 
 .wave-container {
-    height: 100vh;
+    height: 0vh;
     background-color: rgba(155, 168, 168, 0.97);
     position: relative;
 }
 
-.wave-container::before {
-    content: "";
-    width: 100%;
-    height: 75px;
-    position: absolute;
-    bottom: -0.3%;
-    left: 0;
-    background-size: auto;
-    background-repeat: repeat-x;
-    background-position: 0 bottom;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  103' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 75L50 71C100 66 200 57 300 38C400 20 500 -8 600 1C700 11 800 57 900 75C1000 94 1100 84 1150 80L1200 75V103H1150C1100 103 1000 103 900 103C800 103 700 103 600 103C500 103 400 103 300 103C200 103 100 103 50 103H0V75Z' fill='%230d146f'/></svg>");
-    animation: waveAnimation 5s linear infinite;
+
+
+.wave-container::before {   
+  content: "";
+  width: 100%;
+  height: 68px;
+  position: absolute;
+  bottom: -0.3%;
+  left: 0;
+  background-size: auto;
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  89' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 65L50 61C100 57 200 49 300 33C400 17 500 -7 600 1C700 9 800 49 900 65C1000 81 1100 73 1150 69L1200 65V90H1150C1100 90 1000 90 900 90C800 90 700 90 600 90C500 90 400 90 300 90C200 90 100 90 50 90H0V65Z' fill='%230000ff'/></svg>");
+  animation: waveAnimation 5s linear infinite;
 }
 
 @media(max-width:850px) {
-    .wave-container::before {
-        height: 27px
-    }
+  .wave-container::before {    
+    height: 34px
+  }  
 }
-
 
 /* Field service  */
 
@@ -482,7 +665,7 @@ body {
     position: relative;
     background-color: #f4f8fb;
     width: 100%;
-    height: 100vh;
+
 
 }
 
@@ -526,7 +709,7 @@ body {
 /* Footer styling */
 #footer {
     position: relative;
-    background-color: var(--bg-color);
+    background-color: blue;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
     padding: 30px;
     color: white;
@@ -900,7 +1083,7 @@ body {
     /* Center the content vertically */
     padding: 20px;
     /* Add some padding */
-    background-color: var(--bg-color);
+    background-color: blue;
     /* Optional: Background color for the row */
     color: white;
     /* Optional: Text color */

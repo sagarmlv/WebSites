@@ -5,106 +5,156 @@
     position: relative;
 }
 
-.wave-container-about::before {
-    content: "";
-    width: 100%;
-    height: 75px;
-    position: absolute;
-    bottom: -0.3%;
-    left: 0;
-    background-size: auto;
-    background-repeat: repeat-x;
-    background-position: 0 bottom;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  103' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 75L50 71C100 66 200 57 300 38C400 20 500 -8 600 1C700 11 800 57 900 75C1000 94 1100 84 1150 80L1200 75V103H1150C1100 103 1000 103 900 103C800 103 700 103 600 103C500 103 400 103 300 103C200 103 100 103 50 103H0V75Z' fill='%230d146f'/></svg>");
-    animation: waveAnimation 5s linear infinite;
+.wave-container-about::before {   
+  content: "";
+  width: 100%;
+  height: 68px;
+  position: absolute;
+  bottom: -0.3%;
+  left: 0;
+  background-size: auto;
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  89' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 65L50 61C100 57 200 49 300 33C400 17 500 -7 600 1C700 9 800 49 900 65C1000 81 1100 73 1150 69L1200 65V90H1150C1100 90 1000 90 900 90C800 90 700 90 600 90C500 90 400 90 300 90C200 90 100 90 50 90H0V65Z' fill='%230000ff'/></svg>");
+  animation: waveAnimation 5s linear infinite;
 }
 
 @media(max-width:850px) {
-    .wave-container-about::before {
-        height: 27px
+  .wave-container-about::before {    
+    height: 34px
+  }  
+}
+.about-us {    
+    position: relative;
+    background-color: #80808012;
+}
+
+.about-left {
+    position: relative;
+}
+
+.about-left h1 {
+    font-size: 80px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.about-left .contain-about {
+    font-size: 13px;
+    text-align: justify;
+    margin-bottom: 30px;
+    padding-right: 60px;
+
+}
+
+.about-left h2 {
+    font-size: 32px;
+    padding: 0;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+.about-right {
+    border: 2px solid #0056ff;
+    border-radius: 20px;
+    position: relative;
+    padding-top: 50px;
+
+}
+
+.number-box {
+    background-color: #0056ff;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.mission1,
+.mission2,
+.mission3 {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.mission1 p,
+.mission2 p,
+.mission3 p {
+    font-size: 14px;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-right {
+        margin-top: 30px;
     }
 }
 
-#main-contain-about {
-    width: 100%;
-    height: 50vh;
-    position: relative;
+.offer-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
 }
 
-
-
-.banner-contain-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    /* Align content to the left */
-    position: absolute;
-    top: 50%;
-    /* Position content vertically centered */
-    left: 50px;
-    /* Adjust horizontal position */
-    transform: translateY(-50%);
-    color: white;
-    /* Text color to stand out on the banner */
-    z-index: 1;
-    /* Ensure content appears above the image */
+.offer-description {
+    font-size: 14px;
+    color: #555;
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.6;
 }
 
-.banner-about-img
- {
-    width: 100%;
-    height: 100%;
-    position: relative;
+.ul-about {
+    padding-left: 0;
 }
-
-.banner-about-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    position: relative;
-}
-
-.banner-contain-about h1 {
-    font-size: 40px;
-    letter-spacing: 2px;
-    text-align: left;
-    /*text-shadow: 4px 2px 2px 2px red;*/
-    cursor: pointer;
-    margin: 0;
-
-    /* Remove default margin */
+.ul-about-list {
+    font-size: 18px;
+    color: #000;
     margin-bottom: 20px;
-
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
 }
 
-.banner-contain-about h1::after {
-    content: "";
-    position: absolute;
-    left: 10px;
-    right: 0;
-    top: 35%;
-    background-color: red;
-    width: 1%;
-    /* Initial width of the underline */
-    height: 5px;
-    /* Thickness of the underline */
-    z-index: -1;
-    /* Place the line behind the text */
-    transition: width 2s, background-color 0.5s;
-    /* Smooth transition for width and color */
+.ul-about-list i {
+    color: #0056ff;
+    font-size: 20px;
+    margin-right: 10px;
 }
 
-.banner-contain-about h1:hover::after {
-    width: 40%;
-    /* Expand underline to full width on hover */
-    background-color: blue;
-    /* Change underline color on hover */
+.ul-about-list span {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-top: 5px;
 }
 
+/* Hover Effect */
+.ul-about-list:hover {
+    background-color: #f0f8ff;
+    color: #0056ff;
+    cursor: pointer;
+}
 
+.ul-about-list:hover i {
+    color: #003bb3;
+}
 
+/* Responsive Design */
+@media (max-width: 992px) {
+    .offer-description {
+        font-size: 16px;
+    }
+}
 
 
 /* Experiences */
@@ -316,15 +366,17 @@ h2 span {
 
 .banner-about2 {
     position: relative;
-    width: 100%; /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
+    width: 100%;
+    /* Adjust as needed */
+    height: 100%;
+    /* Adjust as needed */
     overflow: hidden;
     border-radius: 50%;
     text-align: center;
     border: 5px solid transparent;
     animation: borderAnimation 5s infinite;
 
-    }
+}
 
 .banner-about2 img {
     position: relative;
@@ -334,10 +386,14 @@ h2 span {
     object-position: center;
     animation: zoomAnimation 5s infinite;
 }
+
 @keyframes zoomAnimation {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
@@ -347,15 +403,19 @@ h2 span {
     0% {
         border-color: #ffcc00;
     }
+
     25% {
         border-color: #00ccff;
     }
+
     50% {
         border-color: #ff66cc;
     }
+
     75% {
         border-color: #66ff66;
     }
+
     100% {
         border-color: #ffcc00;
     }
@@ -365,7 +425,7 @@ h2 span {
 .about-heading2 {
     position: relative;
     margin-top: 10px;
-    
+
     border-radius: 5px;
 }
 
@@ -526,6 +586,7 @@ h2 span {
     border: none;
     border-radius: 8px;
     overflow: hidden;
+    padding: 0 !important;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
@@ -547,13 +608,13 @@ h2 span {
 
 
 .card-body {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
 .card-title {
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+
 }
 
 .card-text {
@@ -561,7 +622,7 @@ h2 span {
     color: #555;
 }
 
-.btn {
+.cust-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -577,30 +638,33 @@ h2 span {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    text-align: center;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.btn-secondary {
-    background-color: #007bff !important;
-    border: none;
-    text-align: center;
-}
-
-.btn-secondary:hover {
+.cust-btn:hover {
     background-color: #0056b3;
 }
 
 /* Optional: Add a subtle hover effect */
-.btn:hover {
+.cust-btn:hover {
     transform: scale(1.05);
 }
+
+.cust-btn .i-pro {
+    font-size: 20px;
+    /* Adjust the icon size */
+    transition: color 0.3s;
+    /* Smooth transition for color change */
+
+}
+
+.cust-btn .i-pro {
+    color: blue;
+    /* Icon color for primary button */
+}
+
+.cust-btn:hover .i-pro {
+    color: red;
+    /* Change icon color on hover */
+}
+
 
 /* Optional: Specific styles for the image container */
 .member-img {
@@ -619,29 +683,29 @@ h2 span {
     object-fit: cover;
 }
 
-.btn i {
+.cust-btn i {
     font-size: 20px;
     /* Adjust the icon size */
     transition: color 0.3s;
     /* Smooth transition for color change */
 }
 
-.btn-primary i {
-    color: white;
+.cust-btn i {
+    color: blue;
     /* Icon color for primary button */
 }
 
-.btn-primary:hover i {
+.cust-btn:hover i {
     color: red;
     /* Change icon color on hover */
 }
 
-.btn-secondary i {
-    color: white;
+.cust-btn i {
+    color: blue;
     /* Icon color for secondary button */
 }
 
-.btn-secondary:hover i {
+.cust-btn:hover i {
     color: red;
     /* Change icon color on hover */
 }
